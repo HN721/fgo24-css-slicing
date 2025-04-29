@@ -1,0 +1,45 @@
+body{
+    margin: 0;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 130px;
+    margin-right: 130px;
+    align-items: center;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}.btn{
+    display: flex;
+    gap: 22px;
+}
+.btn > button {
+    width:80px;
+    height: 42px;
+    background-color: white;
+    color: #2948FF;
+    border-radius: 5px;
+    border: none;
+}
+.btn > button:nth-child(1){
+    width:80px;
+    height: 42px;
+    background-color: #2948FF;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid white;
+}
+.logo > h1{
+    color: white;
+}
+.logo > img {
+    width: 32px;
+    height: 32px;
+}
+.main{
+    background-color: #2948FF;
+    height:100vh;
+}
