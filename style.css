@@ -22,6 +22,9 @@ body{
     background-color: white;
     color: #2948FF;
     border-radius: 5px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
     border: none;
 }
 .btn > button:nth-child(1){
@@ -34,6 +37,9 @@ body{
 }
 .logo > h1{
     color: white;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
 }
 .logo > img {
     width: 32px;
@@ -42,4 +48,90 @@ body{
 .main{
     background-color: #2948FF;
     height:100vh;
+}
+.landing{
+    display: flex;
+    justify-content: center;
+}
+.landing > h1{
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    font-weight: 500;
+    font-size: 60px;
+    color: white;
+
+}
+.ctc{
+    display: flex;
+    gap: 154px;
+}
+.handphone{
+    margin-left: 194.45px;
+}
+.handphone > img{
+    Width:422px;
+Height:443px;
+}
+.play-store{
+    width:225.5px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: #2948FF;
+    border-radius: 6px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    border: none;
+}
+.app-store{
+    width:225.5px;
+    height: 42px;
+    background-color: #2948FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 6px;
+    border: 1px solid white;
+}
+.btn-store{
+    display: flex;
+    align-items: center;
+
+    gap: 25px;
+}
+.play-store > img{
+    width: 24px;
+    height: 24px;
+}
+.app-store > img{
+    width: 24px;
+    height: 24px;
+}
+.store > p{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: white;
+}
+.rounded{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.rounded > img{
+    width: 120px;
+    height: 48px;
+}
+.rounded > h1{
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 500;
+    font-size: 48px;
+    color: white;
+}
+.paragraf{
+    padding-bottom: 120px;
 }
