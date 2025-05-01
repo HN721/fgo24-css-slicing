@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  body {
+    background-color: #396afc;
+  }
+  
+  .container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .login-left,
+  .login-right {
+    width: 50%;
+  }
+  
+  .login-left {
+    background-color: white;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .box {
+    width: 75%;
+    padding: 30px;
+    border-radius: 15px;
+  }
+  
+  .logo-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .logo {
+    width: 40px;
+  }
+  .logo-section > p{
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+
+  }
+  
+  .brand-name {
+    font-weight: bold;
+    color: #396afc;
+  }
+  
+  .welcome-text {
+    font-size: 30px;
+    color: #0B132A;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+  
+  .sub-text {
+    font-size: 16px;
+    font-weight: 400;
+    color: #4F5665;
+    margin-bottom: 20px;
+  }
+  
+  .social-login {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .social-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .social-btn img {
+    width: 20px;
+  }
+  
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .login-form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .login-btn {
+    margin-top: 10px;
+    background-color: #396afc;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .register-link {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 0.9rem;
+  }
+  
+  .register-link a {
+    color: #396afc;
+    text-decoration: none;
+  }
+  
+  .login-right {
+    background-color: #396afc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .illustration {
+    width: 90%;
+    max-width: 500px;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+    .login-left,
+    .login-right {
+      width: 100%;
+      border-radius: 0;
+    }
+  }
+  

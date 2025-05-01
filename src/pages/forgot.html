@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Forgot Password</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Nunito Sans", sans-serif;
+    }
+
+    body {
+      background-color: #396afc;
+    }
+
+    section {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .container {
+      background-color: white;
+      border-radius: 20px;
+      padding: 40px;
+      width: 100%;
+      max-width: 550px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo-section {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .logo {
+      width: 40px;
+    }
+
+    .brand-name {
+      font-weight: 600;
+      font-size: 20px;
+      color: #396afc;
+    }
+
+    h1 {
+      font-size: 30px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #000;
+    }
+
+    .subtitle {
+      color: #666;
+      font-size: 16px;
+      margin-bottom: 30px;
+    }
+
+    label {
+      font-weight: 600;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .input-group {
+      display: flex;
+      align-items: center;
+      background-color: #f9f9f9;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 10px;
+      margin-bottom: 30px;
+    }
+
+    .input-group img {
+      width: 20px;
+      margin-right: 10px;
+    }
+
+    .input-group input {
+      border: none;
+      background: transparent;
+      width: 100%;
+      font-size: 16px;
+      outline: none;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 14px;
+      background-color: #396afc;
+      color: white;
+      font-size: 18px;
+      font-weight: 600;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #315bd8;
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <div class="container">
+      <div class="logo-section">
+        <img src="/src/pages/assets/logo.png" alt="E-Wallet Logo" class="logo" />
+        <p class="brand-name">E-Wallet</p>
+      </div>
+      <h1>Fill Out Form Correctly 👋</h1>
+      <p class="subtitle">We will send new password to your email</p>
+
+      <form>
+        <label for="email">Email</label>
+        <div class="input-group">
+          <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="email icon" />
+          <input type="email" id="email" placeholder="Enter Your Email" required />
+        </div>
+        <button type="submit" class="btn">Submit</button>
+      </form>
+    </div>
+  </section>
+</body>
+</html>
