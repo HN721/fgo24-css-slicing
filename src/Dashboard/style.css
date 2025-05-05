@@ -41,7 +41,7 @@
 }
 .sidebar{
   background-color: #FFFFFF;
-  height: 100%;
+  height: 948px;
   width: 262px;
   border-right: 1px solid #E8E8E8 ;
 
@@ -171,7 +171,7 @@ a {
 
 
 
-.menu{
+.menu1{
   display: flex;
 
   align-items: center;
@@ -227,11 +227,11 @@ color: #4F5665;
 .menu {
   display: flex;
   align-items: center;
-  width: 208px;
+  /* width: 208px; */
   height: 78px;
   padding: 12px;
   gap: 12px;
-  margin: 0 16px;
+  margin: 0 12px;
   background-color: #FFFFFF;
   border-radius: 8px;
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -245,11 +245,15 @@ color: #4F5665;
 .menu:hover p {
   color: white;
 }
+.menu:hover a {
+  color: white;
+}
 
 /* Untuk gambar agar tidak terlihat asing saat hover */
 .menu:hover img {
   filter: brightness(0) invert(1); /* Membuat gambar putih */
   transition: filter 0.3s ease;
+  /* color: white; */
 }
 
 .img-menu {
@@ -288,8 +292,8 @@ color: #4F5665;
   padding: 32px;
 }
 .grafik > img{
- width: 258px;
- height: 100%;
+ width: 598px;
+ height: 381.55035400390625px;
 }
 .trans-child{
   display: flex;
@@ -316,7 +320,6 @@ color: #4F5665;
 } */
 
 .trans-child p {
-  font-weight: bold;
   margin: 0;
 }
 
@@ -343,8 +346,9 @@ color: #4F5665;
   flex-grow: 1;
 }
 
-.people > div > div p:first-child {
-  font-weight: bold;
+.people > div > div p {
+  font-weight: 600;
+  font-size: 16px;
   margin: 0;
 }
 
@@ -358,7 +362,10 @@ color: #4F5665;
   font-weight: bold;
   white-space: nowrap;
 }
-
+.people > div > p:last-child{
+  font-weight: 600;
+  font-size: 16px;
+}
 .people > div > p:contains('+') {
   color: green;
 }
@@ -587,9 +594,9 @@ color: #4F5665;
 /* Modal Overlay */
 .modal {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
+  top: 66px;
+  left: 261px;
+  width: 1179px;
   height: 100vh;
   background-color: rgba(17, 17, 17, 0.4);
   display: flex;
@@ -602,8 +609,8 @@ color: #4F5665;
 
 /* Modal Box */
 .modal-content {
-  width: 596px;
-  height: 490px;
+  width: 496px;
+  height: 500px;
   background-color: white;
   border-radius: 16px;
   padding: 20px;
