@@ -883,6 +883,14 @@ color: #4F5665;
   flex-direction: column;
   gap: 22px;
 }
+.payment-content > p {
+  font-weight: 600;
+  font-size: 16px;
+}
+.oder-payment > p {
+  font-weight: 700;
+  font-size: 14px;
+}
 .oder-payment{
   display: flex;
   justify-content: space-between;
@@ -1145,4 +1153,9 @@ padding: 32px;
 .page > div > a {
   font-weight: 500;
   font-size: 12px;
+}
+@media only screen and (max-width: 780px) {
+.navbar{
+  
+}
 }
