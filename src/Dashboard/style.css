@@ -1154,8 +1154,66 @@ padding: 32px;
   font-weight: 500;
   font-size: 12px;
 }
-@media only screen and (max-width: 780px) {
-.navbar{
-  
+@media only screen and (max-width: 768px) {
+
+body{
+  width: 400px;
+  height: 1067px;
 }
+.navbar{
+  background-color: #2948FF;
+  height: 138px;
+}
+.logo{
+  display: none;
+}
+.content{
+  display: flex;
+  flex-direction: column;
+}
+.trans{
+  width: 400px;
+}
+.chart{
+  display: flex;
+  flex-direction: column;
+
+}
+.chart-child{
+  width: 400px;
+  margin: 0;
+  border: 1px solid #E8E8E8;
+  border-radius: 3px;
+}
+.cart{
+  width: 400px;
+  padding: 20px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.grafik{
+  width: 400px;
+  padding: 22px;
+}
+.grafik > img{
+  width: 350px;
+  height: 350px;
+}
+.content-left{
+  display: none;
+}
+
+.sidebar-link{
+  display: flex;
+  padding: 0;
+  gap: 0;
+  background-color: white;
+  flex-direction: row;
+  width: 400px;
+  height: 74px;
+  position: fixed;
+  bottom: 0;
+}
+
 }
