@@ -349,7 +349,9 @@
   background-color: #E8E8E84D;
   height: 497px;
 }
-
+.img-2 > img:last-child{
+  display: none;
+}
 .donwload-app>div>p:nth-child(1){
   font-size: 36px;
   font-weight: 500;
@@ -671,5 +673,68 @@ font-size: 32px;
   }
 .hero-right > button{
   height: 50px;
+}
+.main4 {
+  display: flex;
+  flex-direction: column;
+
+  margin: 12px 0;
+  width: 400px;
+}
+.img-2 > :first-child{
+  display: none;
+}
+.baner-left{
+  padding: 0 24px;
+  text-align: center;
+}
+.baner-left > p:first-child{
+  text-align: center;
+  font-weight: 500;
+  font-size: 32px;
+}
+.baner-left > p:last-child{
+  padding: 0 4px;
+  font-weight: 400;
+  font-size: 16px;
+}
+.img-2 > img:last-child{
+  display: flex;
+  width: 97.1120376586914px;
+  height: 555.4957275390625px;
+}
+.main5{
+  width: 400px;
+}
+.p-2 > p:first-child{
+  font-size: 32px;
+}
+.p-2 > p:last-child{
+  padding: 0 22px;
+  font-size: 16px;
+}
+.box{
+  width: 330px;
+  margin: 12px 0;
+  padding: 0;
+}
+.box > p:last-child{
+  text-align: center;
+  padding: 0 12px;
+}
+.donwload-app{
+  display: flex;
+  width: 400px;
+  height: 700px;
+  flex-direction: column-reverse;
+  margin: 32px 0;
+  padding: 0;
+}
+.donwload-app > div:last-child{
+  width: 400px;
+}
+.donwload-app > div:first-child > img{
+  width: 330px;
+  height: 300px;
 }
 }
