@@ -1157,7 +1157,7 @@ padding: 32px;
 @media only screen and (max-width: 768px) {
 
 body{
-  width: 400px;
+  width: 629px;
   height: 1067px;
 }
 .navbar{
@@ -1172,7 +1172,9 @@ body{
   flex-direction: column;
 }
 .trans{
-  width: 400px;
+  width: 629px;
+  margin: 0;
+  padding: 33px;
 }
 .chart{
   display: flex;
@@ -1180,40 +1182,55 @@ body{
 
 }
 .chart-child{
-  width: 400px;
+  width: 629px;
   margin: 0;
   border: 1px solid #E8E8E8;
   border-radius: 3px;
 }
 .cart{
-  width: 400px;
+  width: 629px;
   padding: 20px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .grafik{
-  width: 400px;
+  width: 629px;
   padding: 22px;
 }
 .grafik > img{
-  width: 350px;
-  height: 350px;
+  width: 550px;
+  height: 550px;
 }
 .content-left{
   display: none;
 }
-
+.content-responsiv{
+  display:inherit;
+}
 .sidebar-link{
   display: flex;
   padding: 0;
   gap: 0;
   background-color: white;
   flex-direction: row;
-  width: 400px;
+  width: 629px;
   height: 74px;
   position: fixed;
   bottom: 0;
 }
+.img-menu{
+  width: 24px;
+  height: 24px;
+}
+.menu{
+  display: flex;
+  flex-direction: column;
+  width: 75px;
+}
 
+}
+.content-responsiv{
+  display: none;
+  flex-direction: row;
 }
