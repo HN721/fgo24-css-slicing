@@ -1,64 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Login - E-Wallet</title>
-  <link rel="stylesheet" href="login.css" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bellefair&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Rancho&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bellefair&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Rancho&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bellefair&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Rancho&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bellefair&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Rancho&display=swap" rel="stylesheet">
-</head>
-<body>
-  <div class="container">
-    <div class="login-left">
-      <div class="box">
-        <div class="logo-section">
-          <img src="/src/pages/assets/logo.png" alt="E-Wallet Logo" class="logo" />
-          <p class="brand-name">E-Wallet</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | E-Wallet</title>
+    <link rel="stylesheet" href="../src/styles/login.css " />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="alert-off">
+        <div class="alert-box">
+          <img src="/src/icon/alert-3d.png" alt="">
+          <p>Your Password is Wrong</p>
+          <button href="/pages/login.html">Try Again</button>
         </div>
-
-        <div class="welcome-section">
-          <p class="welcome-text">Hello Welcome Back 👋</p>
-          <p class="sub-text">Fill out the form correctly or login with one of the options below.</p>
+      </div>
+      <div class="success-off">
+        <div class="success-box">
+          <img src="/src/icon/success.png" alt="">
+          <p>Login Success</p>
+          <p>wait a minute...</p>
         </div>
-
-        <div class="social-login">
-          <button class="social-btn">
-            <img src="/src/pages/assets/google.png" alt="Google Icon" />
-            <span>Sign In With Google</span>
-          </button>
-          <button class="social-btn">
-            <img src="/src/pages/assets/facebook.png" alt="Facebook Icon" />
-            <span>Sign In With Facebook</span>
-          </button>
+      </div>
+      <div class="login">
+        <div>
+          <img src="../src/assets/logo.png" alt="" />
+          <span>E-Wallet</span>
         </div>
+        <div>
+          <div>
+            <p>Hello Welcome Back 👋</p>
+          </div>
+          <div>
+            <p>Fill out the form correctly or you can login with several option.</p>
+          </div>
+        </div>
+        <div>
+          <a href=""><img src="../src/icon/google.png" alt="" /> Sign In With Google</a>
+          <a href=""><img src="../src/icon/facebook.png" alt="" /> Sign In With Facebook</a>
+        </div>
+        <div class="auth-mobile">
+          <div>
+            <a><img src="../src/icon/google.png" alt="" /></a>
+            <a><img src="../src/icon/facebook.png" alt="" /></a>
+          </div>
+          <div class="or">
+            <svg width="129" height="30" viewBox="0 0 129 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <line x1="0.862488" y1="0.75" x2="129" y2="0.749987" stroke="#DEDEDE" stroke-width="0.5" />
+            </svg>
 
-        <form class="login-form">
-          <label for="email">Email</label>
-          <input id="email" type="email" placeholder="Enter Your Email" required />
-
-          <label for="password">Password</label>
-          <input id="password" type="password" placeholder="Enter Your Password" required />
-
-          <button type="submit" class="login-btn">Login</button>
-        </form>
-
-        <p class="register-link">Don't have an account? <a href="#">Register</a></p>
+            <span>Or</span>
+            <svg width="129" height="30" viewBox="0 0 129 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <line x1="0.862488" y1="0.75" x2="129" y2="0.749987" stroke="#DEDEDE" stroke-width="0.5" />
+            </svg>
+          </div>
+        </div>
+        <div class="form">
+          <form action="">
+            <div class="email">
+              <label for="email">Email</label>
+              <span>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_7_63)">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M1.75 2C0.783502 2 4.49654e-09 2.7835 4.49654e-09 3.75V4.48577C-0.000162957 4.49479 -0.000162567 4.50381 4.49654e-09 4.51282V12.25C4.49654e-09 13.2165 0.783501 14 1.75 14H14.25C15.2165 14 16 13.2165 16 12.25V4.51265C16.0002 4.50376 16.0002 4.49485 16 4.48594V3.75C16 2.7835 15.2165 2 14.25 2H1.75ZM14.5 4.07029V3.75C14.5 3.61193 14.3881 3.5 14.25 3.5H1.75C1.61193 3.5 1.5 3.61193 1.5 3.75V4.07029L8 7.88063L14.5 4.07029ZM1.5 5.80902V12.25C1.5 12.3881 1.61193 12.5 1.75 12.5H14.25C14.3881 12.5 14.5 12.3881 14.5 12.25V5.80902L8.37929 9.39702C8.14507 9.53432 7.85493 9.53432 7.62071 9.39702L1.5 5.80902Z"
+                      fill="#4F5665"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_7_63">
+                      <rect width="16" height="16" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+                <input type="text" placeholder="Enter Your Email" name="email" id="email" />
+              </span>
+            </div>
+            <div class="Password">
+              <label for="password">Password</label>
+              <span>
+                <svg width="20" height="20" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M7.12583 8.00007C7.12583 8.68207 6.57316 9.23473 5.89116 9.23473C5.20916 9.23473 4.65649 8.68207 4.65649 8.00007C4.65649 7.31807 5.20916 6.7654 5.89116 6.7654H5.89316C6.57449 6.76607 7.12583 7.31873 7.12583 8.00007Z"
+                    stroke="#4F5665"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path d="M7.12787 8.00007H11.3399V9.23473" stroke="#4F5665" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M9.45467 9.23473V8.00007" stroke="#4F5665" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M1.83325 8.00007C1.83325 3.3754 3.37525 1.8334 7.99992 1.8334C12.6246 1.8334 14.1666 3.3754 14.1666 8.00007C14.1666 12.6247 12.6246 14.1667 7.99992 14.1667C3.37525 14.1667 1.83325 12.6247 1.83325 8.00007Z"
+                    stroke="#4F5665"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <input type="password" placeholder="Enter Your Password" name="password" id="password" />
+                <button type="button">
+                  <img src="/src/icon/eye-open.svg" alt="">
+                </button>
+              </span>
+            </div>
+            <button class="btn-login" type="submit">Login</button>
+          </form>
+          <p>Not have An Account? <a href="../pages/register.html">Register</a></p>
+        </div>
+      </div>
+      <div class="ilustrasi">
+        <div>
+          <img src="../src/assets/login-3d.png" alt="" />
+        </div>
       </div>
     </div>
-
-    <div class="login-right">
-      <img src="/src/pages/assets/hand-smart.png" alt="Login Illustration" class="illustration" />
-    </div>
-  </div>
-</body>
+    <script src="/src/scripts/login.js"></script>
+  </body>
 </html>

@@ -1,7 +1,6 @@
-html, body {
-  height: 100%;
-  margin: 0;
-}
+/* ============================
+   RESET & BASE STYLES
+============================ */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -9,51 +8,60 @@ html, body {
   font-family: "Montserrat", sans-serif;
 }
 
-body {
+html, body {
+  height: 100%;
   background-color: #396afc;
 }
 
+/* ============================
+   LAYOUT
+============================ */
 .container {
   display: flex;
-  height: auto;
+  flex-wrap: wrap;
+  min-height: 100vh;
 }
 
 .login-left,
 .login-right {
   width: 50%;
-}
-
-.login-left {
-  background-color: white;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.login-left {
+  background-color: #ffffff;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.login-right {
+  background-color: #396afc;
 }
 
 .box {
   width: 75%;
   padding: 30px;
   border-radius: 15px;
-  height: max-content;
 }
 
-.logo-section {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-
-.logo {
-  width: 40px;
+/* ============================
+   TYPOGRAPHY
+============================ */
+.logo-section p,
+.brand-name,
+.welcome-text,
+.sub-text,
+.login-form label,
+.register-link {
+  color: #0B132A;
 }
 
 .logo-section > p {
   font-family: "Nunito Sans", sans-serif;
-  font-weight: 600;
   font-size: 20px;
+  font-weight: 600;
 }
 
 .brand-name {
@@ -63,7 +71,6 @@ body {
 
 .welcome-text {
   font-size: 30px;
-  color: #0B132A;
   font-weight: 500;
   margin-bottom: 5px;
 }
@@ -73,6 +80,31 @@ body {
   font-weight: 400;
   color: #4F5665;
   margin-bottom: 20px;
+}
+
+.register-link {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 0.9rem;
+}
+
+.register-link a {
+  color: #396afc;
+  text-decoration: none;
+}
+
+/* ============================
+   COMPONENTS
+============================ */
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 40px;
 }
 
 .social-login {
@@ -92,6 +124,11 @@ body {
   padding: 10px;
   border-radius: 10px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.social-btn:hover {
+  background-color: #f0f0f0;
 }
 
 .social-btn img {
@@ -101,20 +138,29 @@ body {
 .login-form {
   display: flex;
   flex-direction: column;
-  height: max-content;
   gap: 10px;
 }
 
-.login-form label {
-  font-weight: 600;
-  font-size: 14px;
-  color: #0B132A;
-}
-
-.login-form input {
-  padding: 10px;
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   border: 1px solid #ccc;
   border-radius: 8px;
+  padding: 0 10px;
+  background-color: #fff;
+}
+
+.input-wrapper input {
+  flex: 1;
+  border: none;
+  padding: 10px;
+  outline: none;
+  font-size: 14px;
+}
+
+.input-icon {
+  width: 20px;
 }
 
 .login-btn {
@@ -126,24 +172,11 @@ body {
   border-radius: 10px;
   cursor: pointer;
   font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
-.register-link {
-  text-align: center;
-  margin-top: 15px;
-  font-size: 0.9rem;
-}
-
-.register-link a {
-  color: #396afc;
-  text-decoration: none;
-}
-
-.login-right {
-  background-color: #396afc;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.login-btn:hover {
+  background-color: #2c52d2;
 }
 
 .illustration {
@@ -151,7 +184,9 @@ body {
   max-width: 500px;
 }
 
-/* Responsive */
+/* ============================
+   RESPONSIVE
+============================ */
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
@@ -162,4 +197,17 @@ body {
     width: 100%;
     border-radius: 0;
   }
+
+  .box {
+    width: 90%;
+  }
+
+  .welcome-text {
+    font-size: 24px;
+  }
+}
+.toggle-password {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
 }
