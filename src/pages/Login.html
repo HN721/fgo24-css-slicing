@@ -102,6 +102,15 @@
       </div>
     </div>
 
-    <script src="login.js"></script>
+    <script src="login.js">
+      function togglePassword(inputId, icon) {
+            const input = document.getElementById(inputId);
+            const isPassword = input.type === "password";
+            input.type = isPassword ? "text" : "password";
+            icon.src = isPassword
+              ? "/src/pages/assets/eye-open.png"
+              : "/src/pages/assets/eye-closed.png";
+          }
+    </script>
   </body>
 </html>

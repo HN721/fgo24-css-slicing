@@ -528,7 +528,8 @@ footer .copyright {
 
 @media (max-width:808px){
   .main{
-    width: 400px;
+    width: 100%;
+    max-width: 808px;
     height: 800px;
   }
   .btn{
@@ -562,7 +563,7 @@ footer .copyright {
     height: 48px;
   }
   .icon{
-    width: 400px;
+    width: 100%;
     padding: 12px 21px;
   }
   .navbar{
@@ -571,7 +572,7 @@ footer .copyright {
      0;
   }
   .banner{
-    width: 400px;
+    width: 100%;
     height: min-content;
     display: flex;
     flex-direction: column-reverse;
@@ -579,13 +580,12 @@ footer .copyright {
   }
   .icon > p {
     font-weight: 400;
-    width: 335px;
+    width: 80%;
     font-size: 16px;
     
   }
   .landing{
-    width: 400px;
-    padding: 12px 21px;
+width: 100%;    padding: 12px 21px;
   }
   .landing > p{
     font-weight: 500;
@@ -593,8 +593,7 @@ footer .copyright {
     text-align: left;
   }
   .benefit{
-    width: 400px;
-    padding: 56px 21px;
+width: 100%;    padding: 56px 21px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -613,6 +612,7 @@ footer .copyright {
     text-align: center;
   }
   .main2{
+    width: 100%;
     display: flex;
     flex-direction: column-reverse;
     padding: 0 21px;
@@ -623,7 +623,8 @@ footer .copyright {
     height: 210px;
   }
   .welcome {
-    padding: 0;
+    width: 100%;
+    padding: 21px;
     text-align: center;
     margin: 0;
   }
@@ -652,11 +653,14 @@ footer .copyright {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 400px;
+  width: 100%;
+}
+.img-1 {
+  width: 100%;
 }
 .img-1 > img{
-  width: 333px;
-  height: 333px;
+  width: 90%;
+  height: 90%;
 }
 .hero-right{
   width: 333px;
@@ -679,7 +683,7 @@ font-size: 32px;
   flex-direction: column;
 
   margin: 12px 0;
-  width: 400px;
+  width: 100%;
 }
 .img-2 > :first-child{
   display: none;
@@ -704,7 +708,7 @@ font-size: 32px;
   height: 555.4957275390625px;
 }
 .main5{
-  width: 400px;
+  width: 100%;
 }
 .p-2 > p:first-child{
   font-size: 32px;
@@ -724,20 +728,24 @@ font-size: 32px;
 }
 .donwload-app{
   display: flex;
-  width: 400px;
+  width: 100%;
   height: 700px;
   flex-direction: column-reverse;
   margin: 32px 0;
   padding: 0;
 }
 .donwload-app > div:last-child{
-  width: 400px;
+  width: 100%;
 }
 .donwload-app > div:first-child > img{
-  width: 330px;
-  height: 300px;
+  width: 90%;
+  height: 89%;
 }
 footer{
-  width: 400px;
+  width: 100%;
+}
+.container-box{
+  width: 100%;
+  margin: 0;
 }
 }

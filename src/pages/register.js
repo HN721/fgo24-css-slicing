@@ -3,7 +3,7 @@ const password = document.querySelector("#password");
 const confirmPassword = document.querySelector("#confirm-password");
 const form = document.querySelector(".login-form");
 
-form.addEventListener("submit", (e) => {
+export default form.addEventListener("submit", (e) => {
   e.preventDefault();
 
   if (password.value !== confirmPassword.value) {
@@ -21,11 +21,3 @@ form.addEventListener("submit", (e) => {
   alert("Registrasi berhasil!");
   form.reset();
 });
-function togglePassword(inputId, icon) {
-  const input = document.getElementById(inputId);
-  const isPassword = input.type === "password";
-  input.type = isPassword ? "text" : "password";
-  icon.src = isPassword
-    ? "/src/pages/assets/eye-open.png"
-    : "/src/pages/assets/eye-closed.png";
-}

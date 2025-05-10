@@ -10,24 +10,6 @@
       href="https://fonts.googleapis.com/css2?family=Bellefair&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Rancho&display=swap"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bellefair&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Rancho&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bellefair&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Rancho&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bellefair&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Rancho&display=swap"
-      rel="stylesheet"
-    />
   </head>
   <body>
     <div class="container">
@@ -48,8 +30,8 @@
               With 30.000+ Users
             </p>
             <p class="sub-text">
-              Transfering money is eassier than ever, you can access Zwallet
-              wherever you are. Desktop, laptop, mobile phone? we cover all of
+              Transfering money is easier than ever, you can access Zwallet
+              wherever you are. Desktop, laptop, mobile phone? We cover all of
               that for you!
             </p>
           </div>
@@ -140,6 +122,20 @@
         />
       </div>
     </div>
-    <script src="register.js"></script>
+
+    <!-- Add inline script for toggling password visibility -->
+    <script>
+      function togglePassword(inputId, icon) {
+        // Log to see if the function is triggered
+        console.log("Toggle triggered");
+
+        const input = document.getElementById(inputId);
+        const isPassword = input.type === "password";
+        input.type = isPassword ? "text" : "password";
+        icon.src = isPassword
+          ? "/src/pages/assets/eye-open.png"
+          : "/src/pages/assets/eye-closed.png";
+      }
+    </script>
   </body>
 </html>
