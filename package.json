@@ -1,7 +1,7 @@
 {
   "name": "fgo24-css-slicing",
   "version": "1.0.0",
-  "description": "",
+  "description": "This repository contains the HTML and CSS code for a fully responsive E-Wallet Website, showcasing both a modern landing page and a clean dashboard interface. The layout was carefully sliced from a design mockup, ensuring pixel-perfect accuracy and a consistent user experience across devices.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,5 +12,6 @@
   "license": "ISC",
   "dependencies": {
     "serve": "^14.2.4"
-  }
+  },
+  "devDependencies": {}
 }

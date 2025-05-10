@@ -1640,9 +1640,7 @@ display: none;
     font-size: 14px;
   }
 }
-.list-trans > p{
-  display: none;
-}
+
 .content-responsiv{
   display: none;
   flex-direction: row;
