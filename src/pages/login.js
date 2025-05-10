@@ -9,6 +9,8 @@ form.addEventListener("submit", (e) => {
   const password = document.querySelector("#password").value;
   if (convert.email === email && convert.password === password) {
     alert("Login Berhasil");
+    window.location.href = "../Dashboard/dashboard.html";
+
     form.reset();
   } else {
     alert("Password Salah");
