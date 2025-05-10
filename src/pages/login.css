@@ -206,7 +206,13 @@ html, body {
   .welcome-text {
     font-size: 24px;
   }
+
+  /* Tambahkan ini untuk menyembunyikan gambar di layar kecil */
+  .login-right {
+    display: none;
+  }
 }
+
 .toggle-password {
   width: 20px;
   height: 20px;
