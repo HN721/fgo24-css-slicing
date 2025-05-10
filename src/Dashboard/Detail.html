@@ -4,8 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dasboard E Wallet</title>
+    <link rel="stylesheet" href="style.css" />
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-MFo1Jm9+NcSzy1XnnxZ+muYVhB6bZ8O9pDoyVzG2tMPOdGEB9HjL1aOkUz0eRTBPA3kNdRbnhv7KX0ldmXkWJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Bellefair&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Rancho&display=swap"
       rel="stylesheet"
@@ -29,7 +37,56 @@
       rel="stylesheet"
     />
   </head>
+  <style>
+    .input-icon-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin: 10px 0;
+    }
 
+    .input-icon-wrapper i {
+      position: absolute;
+      left: 10px;
+      color: #888;
+    }
+
+    .input-icon-wrapper input {
+      padding: 10px 10px 10px 36px;
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    .Amount,
+    .note {
+      margin-top: 20px;
+    }
+
+    .Amount p:first-child,
+    .note p:first-child {
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+
+    .Amount p:nth-child(2),
+    .note p:nth-child(2) {
+      font-size: 13px;
+      color: #555;
+      margin-bottom: 6px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 16px;
+      background-color: #2948ff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+  </style>
   <body>
     <div class="wrap">
       <div class="container">

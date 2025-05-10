@@ -47,7 +47,7 @@
           <div class="sidebar">
             <div class="sidebar-link">
               <div class="menu">
-                <img class="img-menu" src="../img/dash.png" alt="" />
+                <img class="img-menu" src="../img/dashboard.png" alt="" />
                 <p>Dashboard</p>
               </div>
               <div class="menu">
@@ -132,24 +132,11 @@
               <div class="profile-content-child">
                 <p class="p-profile1">Profile Picture</p>
                 <div class="picture">
-                  <svg
-                    width="128"
-                    height="128"
-                    viewBox="0 0 128 128"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <rect
-                      width="128"
-                      height="128"
-                      rx="8"
-                      fill="#E8E8E8"
-                      fill-opacity="0.3"
-                    />
-                  </svg>
-                  <div>
-                    <button>Change Profile</button>
-                    <button>Delete Profile</button>
+                  <img src="../img/people5.png" alt="" />
+
+                  <div style="display: flex; gap: 10px; margin-top: 10px">
+                    <button class="btn btn-primary">Change Profile</button>
+                    <button class="btn btn-danger">Delete Profile</button>
                   </div>
                 </div>
                 <p class="p-profile">
@@ -158,25 +145,40 @@
                 <div class="profile-input">
                   <div class="profile-child">
                     <p>Full Name</p>
-                    <input type="text" />
+                    <img src="icon/icon-user.png" alt="" />
+                    <input
+                      type="text"
+                      name="full_name"
+                      placeholder="Enter your full name"
+                    />
                   </div>
                   <div class="profile-child">
                     <p>Phone</p>
-                    <input type="number" />
+                    <img src="icon/phone.png" alt="" />
+                    <input
+                      type="tel"
+                      name="phone"
+                      placeholder="Enter your phone number"
+                    />
                   </div>
                   <div class="profile-child">
                     <p>Email</p>
-                    <input type="number" />
+                    <img src="icon/email.png" alt="" />
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="Enter your email"
+                    />
                   </div>
                   <div class="profile-child">
                     <p>Password</p>
-                    <a href="">Change Password</a>
+                    <a href="#">Change Password</a>
                   </div>
                   <div class="profile-child">
                     <p>Pin</p>
-                    <a href="">Change Pin</a>
+                    <a href="#">Change Pin</a>
                   </div>
-                  <button class="btn-primary3">submit</button>
+                  <button class="btn-primary3">Submit</button>
                 </div>
               </div>
             </div>

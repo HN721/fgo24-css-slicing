@@ -275,6 +275,11 @@ color: #4F5665;
 .btn-days > button:nth-child(1){
   width: 113px;
   height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  justify-content:  space-between;
   background-color: #F1F1F1;
   border-radius: 6px;
   padding: 10px;
@@ -288,6 +293,9 @@ color: #4F5665;
 .btn-days > button:nth-child(2){
   width: 85px;
   height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   background-color: #F1F1F1;
   border-radius: 6px;
   padding: 10px;
@@ -1195,6 +1203,7 @@ padding: 32px;
     background-color: #2948FF;
     height: 135px;
     width: 100%;
+    padding: 23px;
   }
   .chart-child{
     height: max-content;
@@ -1460,7 +1469,7 @@ padding: 32px;
 
   .information {
     width: 100%;
-    padding: 0;
+    padding: 21px;
     border: none;
   }
 
@@ -1502,6 +1511,13 @@ padding: 32px;
   .detail-box > button {
     width: 100%;
   }
+  .profile > div:nth-child(1) > svg{
+    display: none;
+  }
+  .profile > div:nth-child(1){
+    background-color: #2948FF;
+    color: white;
+  }
 }
 .list-trans > p{
   display: none;
@@ -1509,4 +1525,28 @@ padding: 32px;
 .content-responsiv{
   display: none;
   flex-direction: row;
+}
+.profile-child {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.profile-child img {
+  position: absolute;
+  left: 13px;
+  top: 66%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+}
+
+
+.profile-child input {
+  width: 100%;
+  padding: 10px 10px 10px 40px;
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  font-size: 14px;
 }
