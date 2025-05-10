@@ -1,90 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Register - E-Wallet</title>
-  <link rel="stylesheet" href="register.css" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bellefair&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Rancho&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bellefair&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Rancho&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bellefair&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Rancho&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bellefair&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Rancho&display=swap" rel="stylesheet">
-</head>
-<body>
-  <div class="container">
-    <div class="login-left">
-      <div class="box">
-        <div class="logo-section">
-          <img src="/src/pages/assets/logo.png" alt="E-Wallet Logo" class="logo" />
-          <p class="brand-name">E-Wallet</p>
-        </div>
-
-        <div class="welcome-section">
-          <p class="welcome-text">Start Accessing Banking Needs
-            With All Devices and All Platforms
-            With 30.000+ Users</p>
-          <p class="sub-text">Transfering money is eassier than ever, you can access Zwallet wherever you are. Desktop, laptop, mobile phone? we cover all of that for you!</p>
-        </div>
-
-        <div class="social-login">
-          <button class="social-btn">
-            <img src="/src/pages/assets/google.png" alt="Google Icon" />
-            <span>Sign In With Google</span>
-          </button>
-          <button class="social-btn">
-            <img src="/src/pages/assets/facebook.png" alt="Facebook Icon" />
-            <span>Sign In With Facebook</span>
-          </button>
-        </div>
-
-        <form class="login-form">
-          <label for="email">Email</label>
-          <div class="input-wrapper">
-            <img src="/src/pages/assets/email.png" class="input-icon" alt="Email Icon" />
-            <input id="email" type="email" placeholder="Enter Your Email" required />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register - E-Wallet</title>
+    <link rel="stylesheet" href="register.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bellefair&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Rancho&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bellefair&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Rancho&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bellefair&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Rancho&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bellefair&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Rancho&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="login-left">
+        <div class="box">
+          <div class="logo-section">
+            <img
+              src="/src/pages/assets/logo.png"
+              alt="E-Wallet Logo"
+              class="logo"
+            />
+            <p class="brand-name">E-Wallet</p>
           </div>
 
-          <label for="password">Password</label>
-          <div class="input-wrapper">
-            <img src="/src/pages/assets/lock.png" class="input-icon" alt="Password Icon" />
-            <input id="password" type="password" placeholder="Enter Your Password" required />
-            <img src="/src/pages/assets/eye-closed.png" alt="Toggle Password" class="toggle-password" onclick="togglePassword('password', this)" />
+          <div class="welcome-section">
+            <p class="welcome-text">
+              Start Accessing Banking Needs With All Devices and All Platforms
+              With 30.000+ Users
+            </p>
+            <p class="sub-text">
+              Transfering money is eassier than ever, you can access Zwallet
+              wherever you are. Desktop, laptop, mobile phone? we cover all of
+              that for you!
+            </p>
           </div>
 
-          <label for="confirm-password">Confirm Password</label>
-          <div class="input-wrapper">
-            <img src="/src/pages/assets/lock.png" class="input-icon" alt="Confirm Password Icon" />
-            <input id="confirm-password" type="password" placeholder="Enter Your Password Again" required />
-            <img src="/src/pages/assets/eye-closed.png" alt="Toggle Confirm Password" class="toggle-password" onclick="togglePassword('confirm-password', this)" />
+          <div class="social-login">
+            <button class="social-btn">
+              <img src="/src/pages/assets/google.png" alt="Google Icon" />
+              <span>Sign In With Google</span>
+            </button>
+            <button class="social-btn">
+              <img src="/src/pages/assets/facebook.png" alt="Facebook Icon" />
+              <span>Sign In With Facebook</span>
+            </button>
           </div>
 
-          <button type="submit" class="login-btn">Register</button>
-        </form>
-        
-        <p class="register-link">Have An Account? <a href="Login.html">Login</a></p>
+          <form class="login-form">
+            <label for="email">Email</label>
+            <div class="input-wrapper">
+              <img
+                src="/src/pages/assets/email.png"
+                class="input-icon"
+                alt="Email Icon"
+              />
+              <input
+                id="email"
+                type="email"
+                placeholder="Enter Your Email"
+                required
+              />
+            </div>
+
+            <label for="password">Password</label>
+            <div class="input-wrapper">
+              <img
+                src="/src/pages/assets/lock.png"
+                class="input-icon"
+                alt="Password Icon"
+              />
+              <input
+                id="password"
+                type="password"
+                placeholder="Enter Your Password"
+                required
+              />
+              <img
+                src="/src/pages/assets/eye-closed.png"
+                alt="Toggle Password"
+                class="toggle-password"
+                onclick="togglePassword('password', this)"
+              />
+            </div>
+
+            <label for="confirm-password">Confirm Password</label>
+            <div class="input-wrapper">
+              <img
+                src="/src/pages/assets/lock.png"
+                class="input-icon"
+                alt="Confirm Password Icon"
+              />
+              <input
+                id="confirm-password"
+                type="password"
+                placeholder="Enter Your Password Again"
+                required
+              />
+              <img
+                src="/src/pages/assets/eye-closed.png"
+                alt="Toggle Confirm Password"
+                class="toggle-password"
+                onclick="togglePassword('confirm-password', this)"
+              />
+            </div>
+
+            <button type="submit" class="login-btn">Register</button>
+          </form>
+
+          <p class="register-link">
+            Have An Account? <a href="Login.html">Login</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="login-right">
+        <img
+          src="/src/pages/assets/hand.png"
+          alt="Login Illustration"
+          class="illustration"
+        />
       </div>
     </div>
-
-    <div class="login-right">
-      <img src="/src/pages/assets/hand.png" alt="Login Illustration" class="illustration" />
-    </div>
-  </div>
-  <script>
-    function togglePassword(inputId, icon) {
-      const input = document.getElementById(inputId);
-      const isPassword = input.type === "password";
-      input.type = isPassword ? "text" : "password";
-      icon.src = isPassword
-        ? "/src/pages/assets/eye-open.png"
-        : "/src/pages/assets/eye-closed.png";
-    }
-  </script>
-</body>
+    <script src="register.js"></script>
+  </body>
 </html>

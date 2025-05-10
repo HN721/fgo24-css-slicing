@@ -21,3 +21,11 @@ form.addEventListener("submit", (e) => {
   alert("Registrasi berhasil!");
   form.reset();
 });
+function togglePassword(inputId, icon) {
+  const input = document.getElementById(inputId);
+  const isPassword = input.type === "password";
+  input.type = isPassword ? "text" : "password";
+  icon.src = isPassword
+    ? "/src/pages/assets/eye-open.png"
+    : "/src/pages/assets/eye-closed.png";
+}
