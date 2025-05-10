@@ -1586,6 +1586,59 @@ display: none;
     font-weight: 400;
     font-size: 14px;
   }
+  .pin,.btn-primary4, .pin-child{
+    width: 100%;
+    max-width: 332px;
+    border: none;
+  }
+  .pin-child{
+    padding: 0;
+  }
+  .detail-box > p{
+    font-weight: 500;
+    font-size: 14px;
+  }
+  .frame{
+   gap: 5;
+  }
+  .frame > button{
+    margin-top: 0;
+  }
+  .detail-trans{
+    border: none;
+  }
+  .Amount p:first-child, .note p:first-child{
+    font-weight: 500;
+    font-size: 14px;
+  }
+  .Amount p:nth-child(2), .note p:nth-child(2){
+    font-weight: 400;
+    font-size: 12px;
+  }
+  .modal-content1{
+    width: 100%;
+    max-width: 333px;
+    width: 590px;
+    padding: 10px;
+    
+  }
+  .modal-title{
+    font-weight: 600;
+    font-size: 12px;
+  }
+  .success-text{
+    font-weight: 600;
+    font-size: 18px;
+  }
+  .desc-text{
+    font-weight: 400;
+    font-size: 12px;
+  }
+  .btn-contact, .btn-conta{
+    width: 100%;
+    font-weight: 500;
+    font-size: 14px;
+  }
 }
 .list-trans > p{
   display: none;
