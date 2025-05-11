@@ -200,13 +200,3 @@ searchInput.addEventListener("input", searchData);
 
 // Initial display
 displayPeople(currentPage, filteredPeople);
-
-// Password toggle function (if needed elsewhere)
-function togglePassword(inputId, icon) {
-  const input = document.getElementById(inputId);
-  const isPassword = input.type === "password";
-  input.type = isPassword ? "text" : "password";
-  icon.src = isPassword
-    ? "/src/pages/assets/eye-open.png"
-    : "/src/pages/assets/eye-closed.png";
-}
