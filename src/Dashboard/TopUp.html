@@ -1,137 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dasboard E Wallet</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="login.css" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bellefair&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Rancho&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bellefair&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Rancho&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bellefair&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Rancho&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bellefair&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Rancho&display=swap" rel="stylesheet">
-</head>
-<body>
-  <div class="wrap">
-    <div class="container">
-      <nav class="navbar">
-  <div class="logo">
-    <img src="../icon/logo.png" alt="">
-    <p>E-Wallet</p>
-  </div>
-  <div class="logo-right">
-    <p>Ghaluh Wizard</p>
-    <img src="/src/img/orang.png" alt="">
-  </div>
-      </nav>
-      <div class="num">
-        <div class="sidebar">
-          <div class="sidebar-link">
-          <div class="menu">
-            <img class="img-menu" src="../img/dash.png" alt=""> <a href="dashboard.html"> Dashboard</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dasboard E Wallet</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="login.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bellefair&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Rancho&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bellefair&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Rancho&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bellefair&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Rancho&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bellefair&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Rancho&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="container">
+        <nav class="navbar">
+          <div class="logo">
+            <img src="../icon/logo.png" alt="" />
+            <p>E-Wallet</p>
           </div>
-         <div class="menu"><img class="img-menu" src="../img/transaksi.png" alt=""><a href="Transfer.html"> Transfer</a></div> 
-          <div class="menu"><img class="img-menu" src="../img/history.png" alt=""><a href="history.html"> History</a></div>
-          <div class="menu"><img class="img-menu" src="../img/topup.png" alt=""><a href="TopUp.html"> Top Up</a></div>
-          <div class="menu"><img class="img-menu" src="../img/profile.png" alt=""><a href="edit-pofile.html"> Profile</a></div>
-          <div class="menu"><img class="img-menu" src="../img/keluar.png" alt=""> <a href="#">Keluar</a></div>
+
+          <div class="logo-right">
+            <p>Ghaluh Wizard</p>
+            <img src="/src/img/orang.png" alt="" />
+
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18.5 9L12.5 15L6.5 9"
+                stroke="#4F5665"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
           </div>
-  
+        </nav>
+        <div class="num">
+          <div class="sidebar">
+            <div class="sidebar-link">
+              <div class="menu">
+                <img class="img-menu" src="../img/dash.png" alt="" />
+                <a href="dashboard.html"> Dashboard</a>
+              </div>
+              <div class="menu">
+                <img class="img-menu" src="../img/transaksi.png" alt="" /><a
+                  href="Transfer.html"
+                >
+                  Transfer</a
+                >
+              </div>
+              <div class="menu">
+                <img class="img-menu" src="../img/history.png" alt="" /><a
+                  href="history.html"
+                >
+                  History</a
+                >
+              </div>
+              <div class="menu">
+                <img class="img-menu" src="../img/topup.png" alt="" /><a
+                  href="TopUp.html"
+                >
+                  Top Up</a
+                >
+              </div>
+              <div class="menu">
+                <img class="img-menu" src="../img/profile.png" alt="" /><a
+                  href="edit-pofile.html"
+                >
+                  Profile</a
+                >
+              </div>
+              <div class="menu">
+                <img class="img-menu" src="../img/keluar.png" alt="" />
+                <a href="#">Keluar</a>
+              </div>
+            </div>
+          </div>
+          <div class="top-up">
+            <div class="top-up-up">
+              <img src="icon/send.png" alt="" />
+              <p>Top Up Account</p>
+            </div>
+            <div class="top-content">
+              <div class="information">
+                <p>Account Information</p>
+                <div class="detail-img1">
+                  <div>
+                    <img src="../img/people10.png" alt="" />
+                    <div class="frame">
+                      <p>Ghaluh 1</p>
+                      <p>(239) 555-0108</p>
+                      <button>
+                        <img src="../img/ceklis.png" alt="" />Verified
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="mount">
+                  <p>Amount</p>
+                  <p>
+                    Type the amount you want to transfer to your e-wallet
+                    account
+                  </p>
+                  <input type="text" placeholder="Enter Nominal Transfer" />
+                </div>
+                <div class="method">
+                  <div>
+                    <p>Payment Method</p>
+                    <p>Choose your payment method for top up account</p>
+                  </div>
+                  <div class="payment-img">
+                    <input type="radio" />
+
+                    <img src="icon/bri.png" alt="" />
+                    <p>Bank Rakyat Indonesia</p>
+                  </div>
+                  <div class="payment-img1">
+                    <input type="radio" />
+                    <img src="icon/dana.png" alt="" />
+                    <p>DANA</p>
+                  </div>
+                  <div class="payment-img2">
+                    <input type="radio" />
+
+                    <img src="icon/bca.png" alt="" />
+                    <p>Bank Central Asia</p>
+                  </div>
+                  <div class="payment-img3">
+                    <input type="radio" />
+
+                    <img src="icon/gopay.png" alt="" />
+                    <p>GoPay</p>
+                  </div>
+                  <div class="payment-img4">
+                    <input type="radio" />
+
+                    <img src="icon/ovo.png" alt="" />
+                    <p>OvO</p>
+                  </div>
+                </div>
+              </div>
+              <div class="payment">
+                <div class="payment-content">
+                  <p>Payment</p>
+                  <div class="oder-payment">
+                    <p>Order</p>
+                    <p>Idr. 40.000</p>
+                  </div>
+                  <div class="oder-payment">
+                    <p>Delivery</p>
+                    <p>Idr. 40.000</p>
+                  </div>
+                  <div class="oder-payment">
+                    <p>Tax</p>
+                    <p>Idr. 4000</p>
+                  </div>
+                  <div class="oder-payment">
+                    <p>Sub Total</p>
+                    <p>Idr.44.000</p>
+                  </div>
+                  <button style="width: 100%" class="btn-primary">
+                    Submit
+                  </button>
+                  <p style="font-weight: 400; font-size: 14px; color: #4f5665">
+                    *Get Discount if you pay with Bank Central Asia
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-       <div class="top-up">
-        <div class="top-up-up">
-          <img src="icon/send.png" alt="">
-          <p>Top Up Account</p>
-        </div>
-        <div class="top-content">
-          <div class="information">
-            <p>Account Information</p>
-            <div class="detail-img1">
-              <div>
-               <img src="../img/people10.png" alt="">
-               <div class="frame">
-                   <p>Ghaluh 1</p>
-                   <p>(239) 555-0108</p>
-                   <button><img src="../img/ceklis.png" alt="">Verified</button>
-               </div>
-              </div>
-          
-            </div>
-            <div class="mount">
-              <p>Amount</p>
-              <p>Type the amount you want to transfer to your e-wallet account</p>
-              <input type="text" placeholder="Enter Nominal Transfer">
-            </div>
-            <div class="method">
-             <div>
-              <p>Payment Method</p>
-              <p>Choose your payment method for top up account</p>
-             </div>
-              <div class="payment-img">
-                <input type="radio">
-
-                <img src="icon/bri.png" alt="">
-                <p>Bank Rakyat Indonesia</p>
-              </div>
-              <div class="payment-img1">
-                <input type="radio">
-                <img src="icon/dana.png" alt="">
-                <p>DANA</p>
-              </div>
-              <div class="payment-img2">
-                <input type="radio">
-
-                <img src="icon/bca.png" alt="">
-                <p>Bank Central Asia</p>
-              </div>
-              <div class="payment-img3">
-                <input type="radio">
-
-                <img src="icon/gopay.png" alt="">
-                <p>GoPay</p>
-              </div>
-              <div class="payment-img4">
-                <input type="radio">
-
-                <img src="icon/ovo.png" alt="">
-                <p>OvO</p>
-              </div>
-            </div>
-          </div>
-          <div class="payment">
-            <div class="payment-content">
-              <p>Payment</p>
-              <div class="oder-payment">
-                <p>Order</p>
-                <p>Idr. 40.000</p>
-              </div>
-              <div class="oder-payment">
-                <p>Delivery</p>
-                <p>Idr. 40.000</p>
-              </div>
-              <div class="oder-payment">
-                <p>Tax</p>
-                <p>Idr. 4000</p>
-              </div>
-              <div class="oder-payment">
-                <p>Sub Total</p>
-                <p>Idr.44.000</p>
-              </div>
-              <button style="width: 100%;" class="btn-primary">Submit</button>
-              <p style="font-weight: 400; font-size: 14px; color: #4F5665;">*Get Discount if you pay with Bank Central Asia</p>
-            </div>
-          </div>
-        </div>
-       </div>
       </div>
     </div>
-  </div>
-</body>
+  </body>
 </html>
