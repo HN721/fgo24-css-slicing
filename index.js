@@ -100,64 +100,32 @@ const people = [
     phone: "(239) 555–0120",
   },
 ];
+
 const container = document.querySelector(".table-trans");
-people.forEach((item) => {
-  const listTrans = document.createElement("div");
-  const star = document.createElement("img");
-  star.classList.add("star");
-  star.src = "/src/img/star.png";
+const prevBtn = document.getElementById("prev-btn");
+const nextBtn = document.getElementById("next-btn");
+const pageNumbers = document.getElementById("page-numbers");
+const currentRange = document.getElementById("current-range");
+const totalEntries = document.getElementById("total-entries");
+const searchInput = document.querySelector("#search");
 
-  listTrans.classList.add("list-trans");
-  const img = document.createElement("img");
+const itemsPerPage = 5;
+let currentPage = 1;
+let filteredPeople = [...people]; // Initially, all people
 
-  img.src = item.image;
+function displayPeople(page, peopleList) {
+  container.innerHTML = ""; // Clear previous content
+  const start = (page - 1) * itemsPerPage;
+  const end = start + itemsPerPage;
+  const paginatedPeople = peopleList.slice(start, end);
 
-  const p1 = document.createElement("p");
-  p1.textContent = item.name;
-
-  const p2 = document.createElement("p");
-  p2.textContent = item.phone;
-  console.log((p2.textContent = item.phone));
-  listTrans.append(img);
-  listTrans.append(p1);
-  listTrans.append(p2);
-  listTrans.append(star);
-  container.append(listTrans);
-});
-people.forEach((item) => {
-  const listGaluh = document.createElement("div");
-  listGaluh.classList.add("listGaluh");
-  const p1 = document.createElement("p");
-  p1.textContent = item.name;
-  const star = document.createElement("img");
-  star.classList.add("star");
-  const p2 = document.createElement("p");
-  p2.textContent = item.phone;
-  listGaluh.append(p1);
-  listGaluh.append(p2);
-  listGaluh.append(star);
-  star.src = "/src/img/star.png";
-
-  container.append(listGaluh);
-});
-document.querySelector("#search").addEventListener("input", searchData);
-
-function searchData() {
-  const searchParams = document.querySelector("#search").value.toLowerCase();
-  const container = document.querySelector(".table-trans");
-
-  container.innerHTML = "";
-
-  const filteredPeople = people.filter((person) =>
-    person.name.toLowerCase().includes(searchParams)
-  );
-
-  filteredPeople.forEach((item) => {
+  paginatedPeople.forEach((item) => {
     const listTrans = document.createElement("div");
     listTrans.classList.add("list-trans");
 
     const img = document.createElement("img");
     img.src = item.image;
+    img.alt = item.name;
 
     const p1 = document.createElement("p");
     p1.textContent = item.name;
@@ -168,14 +136,72 @@ function searchData() {
     const star = document.createElement("img");
     star.classList.add("star");
     star.src = "/src/img/star.png";
+    star.alt = "Favorite";
 
     listTrans.append(img, p1, p2, star);
     container.append(listTrans);
   });
+
+  // Update pagination info
+  currentRange.textContent = `${start + 1}-${Math.min(end, peopleList.length)}`;
+  totalEntries.textContent = peopleList.length;
+  updatePaginationControls(peopleList);
 }
 
-const typeElement = document.querySelector("#move-p");
-const text = "Experience the Future of Digital Payments with e-wallet";
+function updatePaginationControls(peopleList) {
+  const totalPages = Math.ceil(peopleList.length / itemsPerPage);
+
+  // Update buttons
+  prevBtn.disabled = currentPage === 1;
+  nextBtn.disabled = currentPage === totalPages || totalPages === 0;
+
+  // Generate page numbers
+  pageNumbers.innerHTML = "";
+  for (let i = 1; i <= totalPages; i++) {
+    const pageBtn = document.createElement("button");
+    pageBtn.textContent = i;
+    pageBtn.classList.toggle("active", i === currentPage);
+    pageBtn.addEventListener("click", () => {
+      currentPage = i;
+      displayPeople(currentPage, filteredPeople);
+    });
+    pageNumbers.append(pageBtn);
+  }
+}
+
+function searchData() {
+  const searchParams = searchInput.value.toLowerCase();
+  filteredPeople = people.filter(
+    (person) =>
+      person.name.toLowerCase().includes(searchParams) ||
+      person.phone.includes(searchParams)
+  );
+  currentPage = 1; // Reset to first page on new search
+  displayPeople(currentPage, filteredPeople);
+}
+
+// Event listeners
+prevBtn.addEventListener("click", () => {
+  if (currentPage > 1) {
+    currentPage--;
+    displayPeople(currentPage, filteredPeople);
+  }
+});
+
+nextBtn.addEventListener("click", () => {
+  const totalPages = Math.ceil(filteredPeople.length / itemsPerPage);
+  if (currentPage < totalPages) {
+    currentPage++;
+    displayPeople(currentPage, filteredPeople);
+  }
+});
+
+searchInput.addEventListener("input", searchData);
+
+// Initial display
+displayPeople(currentPage, filteredPeople);
+
+// Password toggle function (if needed elsewhere)
 function togglePassword(inputId, icon) {
   const input = document.getElementById(inputId);
   const isPassword = input.type === "password";

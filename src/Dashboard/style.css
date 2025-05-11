@@ -1201,6 +1201,85 @@ padding: 32px;
   font-weight: 500;
   font-size: 12px;
 }
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Styling for Prev and Next buttons */
+.pagination button#prev-btn,
+.pagination button#next-btn {
+  padding: 8px 16px;
+  border: 1px solid #d1d5db;
+  background-color: #ffffff;
+  color: #4f5665;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Hover state for Prev and Next buttons */
+.pagination button#prev-btn:hover:not(:disabled),
+.pagination button#next-btn:hover:not(:disabled) {
+  background-color: #007bff;
+  color: #ffffff;
+  border-color: #007bff;
+}
+
+/* Disabled state for Prev and Next buttons */
+.pagination button#prev-btn:disabled,
+.pagination button#next-btn:disabled {
+  background-color: #f3f4f6;
+  color: #9ca3af;
+  cursor: not-allowed;
+  border-color: #e5e7eb;
+}
+
+/* Styling for the page numbers container */
+.pagination #page-numbers {
+  display: flex;
+  gap: 8px;
+}
+
+/* Styling for individual page number buttons */
+.pagination #page-numbers button {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #d1d5db;
+  background-color: #ffffff;
+  color: #4f5665;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+/* Hover state for page number buttons */
+.pagination #page-numbers button:hover:not(.active) {
+  background-color: #f3f4f6;
+  border-color: #007bff;
+}
+
+/* Active state for the current page number */
+.pagination #page-numbers button.active {
+  background-color: #007bff;
+  color: #ffffff;
+  border-color: #007bff;
+  font-weight: 600;
+}
+
+/* Accessibility: Focus states for buttons */
+.pagination button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.3);
+}
  
 /* RESPONSIVE LAYOUT UNTUK MOBILE */
 @media only screen and (max-width: 768px) {
