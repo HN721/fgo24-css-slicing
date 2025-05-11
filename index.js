@@ -124,20 +124,63 @@ people.forEach((item) => {
   listTrans.append(star);
   container.append(listTrans);
 });
+people.forEach((item) => {
+  const listGaluh = document.createElement("div");
+  listGaluh.classList.add("listGaluh");
+  const p1 = document.createElement("p");
+  p1.textContent = item.name;
+  const star = document.createElement("img");
+  star.classList.add("star");
+  const p2 = document.createElement("p");
+  p2.textContent = item.phone;
+  listGaluh.append(p1);
+  listGaluh.append(p2);
+  listGaluh.append(star);
+  star.src = "/src/img/star.png";
 
-function authLogin(email, password) {
-  const data = window.localStorage.getItem("user");
-  const convert = JSON.parse(data);
-  if (convert.email === email && convert.password === password) {
-    console.log("Login Berhasil");
-  } else {
-    console.log("Password Salah");
-  }
+  container.append(listGaluh);
+});
+document.querySelector("#search").addEventListener("input", searchData);
+
+function searchData() {
+  const searchParams = document.querySelector("#search").value.toLowerCase();
+  const container = document.querySelector(".table-trans");
+
+  container.innerHTML = "";
+
+  const filteredPeople = people.filter((person) =>
+    person.name.toLowerCase().includes(searchParams)
+  );
+
+  filteredPeople.forEach((item) => {
+    const listTrans = document.createElement("div");
+    listTrans.classList.add("list-trans");
+
+    const img = document.createElement("img");
+    img.src = item.image;
+
+    const p1 = document.createElement("p");
+    p1.textContent = item.name;
+
+    const p2 = document.createElement("p");
+    p2.textContent = item.phone;
+
+    const star = document.createElement("img");
+    star.classList.add("star");
+    star.src = "/src/img/star.png";
+
+    listTrans.append(img, p1, p2, star);
+    container.append(listTrans);
+  });
 }
-function authRegister(email, password) {
-  const data = { email, password };
-  const convert = JSON.stringify(data);
-  window.localStorage.setItem("user", convert);
+
+const typeElement = document.querySelector("#move-p");
+const text = "Experience the Future of Digital Payments with e-wallet";
+function togglePassword(inputId, icon) {
+  const input = document.getElementById(inputId);
+  const isPassword = input.type === "password";
+  input.type = isPassword ? "text" : "password";
+  icon.src = isPassword
+    ? "/src/pages/assets/eye-open.png"
+    : "/src/pages/assets/eye-closed.png";
 }
-authRegister("hosea", 12345);
-authLogin("hosea", 123245);

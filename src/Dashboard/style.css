@@ -14,17 +14,21 @@
     flex-direction: column;
     /* height: 100vh; */
   } 
-.navbar{
-  background-color: #FFFFFF;
-  display: flex;
-  justify-content: space-between;
-  padding-left: 32px;
-  padding-right: 32px;
-  align-items: center;
- 
-  height: 76px;
-  border-bottom: 1px solid #E8E8E8 ;
-}
+  .navbar {
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 32px;
+    padding-right: 32px;
+    align-items: center;
+    height: 76px;
+    border-bottom: 1px solid #E8E8E8;
+  
+
+    width: 100%;
+    /* z-index: 999; */
+  }
+  
 .logo{
   display: flex;
   align-items: center;
@@ -1303,9 +1307,13 @@ padding: 32px;
   }
   .navbar {
     display: none;
+
   }
   .container1 .navbar {
     display: block;
+    position: static;
+    z-index: 0;
+
   }
 
   .grafik > img {
@@ -1336,6 +1344,8 @@ padding: 32px;
     position: fixed;
     bottom: 0;
     left: 0;
+    z-index: 999; /* agar tetap di atas elemen lain */
+
   }
 
   .img-menu {
@@ -1432,6 +1442,7 @@ padding: 32px;
   .listGaluh {
     display: flex;
     flex-direction: column;
+    
   }
 
   .star {
@@ -1536,6 +1547,9 @@ padding: 32px;
   .table-people{
     display: flex;
     flex-direction: column;
+  }
+  .list-trans{
+    display: none;
   }
   .list-trans1 > img:nth-child(1){
     display: none;

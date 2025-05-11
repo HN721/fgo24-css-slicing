@@ -655,8 +655,11 @@ width: 100%;    padding: 56px 21px;
   align-items: center;
   width: 100%;
 }
+
 .img-1 {
   width: 100%;
+  display: flex;
+  justify-content: center;
 }
 .img-1 > img{
   width: 90%;
