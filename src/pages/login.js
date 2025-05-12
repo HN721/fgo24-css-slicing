@@ -21,8 +21,8 @@ form.addEventListener("submit", (e) => {
   } else {
     Swal.fire({
       icon: "error",
-      title: "Oops...",
-      text: "Something went wrong!",
+      title: "Login Failed!",
+      text: "Incorrect Password or Email!",
     });
   }
 });

@@ -3,7 +3,7 @@ const password = document.querySelector("#password");
 const confirmPassword = document.querySelector("#confirm-password");
 const form = document.querySelector(".login-form");
 
-export default form.addEventListener("submit", (e) => {
+form.addEventListener("submit", (e) => {
   e.preventDefault();
 
   if (password.value !== confirmPassword.value) {
@@ -18,6 +18,15 @@ export default form.addEventListener("submit", (e) => {
 
   localStorage.setItem("user", JSON.stringify(userData));
 
-  alert("Registrasi berhasil!");
+  Swal.fire({
+    title: "Success Register",
+    text: "Wait a Minute",
+    icon: "success",
+  }).then((result) => {
+    if (result.isConfirmed) {
+      // form.reset();
+      window.location.href = "login.html";
+    }
+  });
   form.reset();
 });
