@@ -114,7 +114,7 @@ let currentPage = 1;
 let filteredPeople = [...people];
 
 function displayPeople(page, peopleList) {
-  container.innerHTML = ""; // Clear previous content
+  container.innerHTML = "";
   const start = (page - 1) * itemsPerPage;
   const end = start + itemsPerPage;
   const paginatedPeople = peopleList.slice(start, end);
@@ -131,22 +131,26 @@ function displayPeople(page, peopleList) {
     img.src = item.image;
     img.alt = item.name;
 
+    const textWrapper = document.createElement("div");
+    textWrapper.classList.add("text-wrapper");
+
     const p1 = document.createElement("p");
     p1.textContent = item.name;
 
     const p2 = document.createElement("p");
     p2.textContent = item.phone;
 
+    textWrapper.append(p1, p2);
+
     const star = document.createElement("img");
     star.classList.add("star");
     star.src = "/src/img/star.png";
     star.alt = "Favorite";
 
-    listTrans.append(img, p1, p2, star);
+    listTrans.append(img, textWrapper, star);
     container.append(listTrans);
   });
 
-  // Update pagination info
   currentRange.textContent = `${start + 1}-${Math.min(end, peopleList.length)}`;
   totalEntries.textContent = peopleList.length;
   updatePaginationControls(peopleList);
@@ -155,11 +159,9 @@ function displayPeople(page, peopleList) {
 function updatePaginationControls(peopleList) {
   const totalPages = Math.ceil(peopleList.length / itemsPerPage);
 
-  // Update buttons
   prevBtn.disabled = currentPage === 1;
   nextBtn.disabled = currentPage === totalPages || totalPages === 0;
 
-  // Generate page numbers
   pageNumbers.innerHTML = "";
   for (let i = 1; i <= totalPages; i++) {
     const pageBtn = document.createElement("button");
@@ -180,7 +182,7 @@ function searchData() {
       person.name.toLowerCase().includes(searchParams) ||
       person.phone.includes(searchParams)
   );
-  currentPage = 1; // Reset to first page on new search
+  currentPage = 1;
   displayPeople(currentPage, filteredPeople);
 }
 
@@ -202,5 +204,4 @@ nextBtn.addEventListener("click", () => {
 
 searchInput.addEventListener("input", searchData);
 
-// Initial display
 displayPeople(currentPage, filteredPeople);

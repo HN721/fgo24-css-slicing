@@ -101,16 +101,17 @@
         />
       </div>
     </div>
-
-    <script src="login.js">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="login.js"></script>
+    <script>
       function togglePassword(inputId, icon) {
-            const input = document.getElementById(inputId);
-            const isPassword = input.type === "password";
-            input.type = isPassword ? "text" : "password";
-            icon.src = isPassword
-              ? "/src/pages/assets/eye-open.png"
-              : "/src/pages/assets/eye-closed.png";
-          }
+        const input = document.getElementById(inputId);
+        const isPassword = input.type === "password";
+        input.type = isPassword ? "text" : "password";
+        icon.src = isPassword
+          ? "/src/pages/assets/eye-open.png"
+          : "/src/pages/assets/eye-closed.png";
+      }
     </script>
   </body>
 </html>

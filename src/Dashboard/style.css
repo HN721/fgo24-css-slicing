@@ -443,11 +443,18 @@ color: #4F5665;
 .table-trans{
   padding: 24px;
 }
-.list-trans{
+.list-trans:nth-child(odd){
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-bottom: 32px;
+  padding: 22px;
+  background-color: #FAF6E9;
+}
+.list-trans:nth-child(even){
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px;
 }
 .list-trans > img:nth-child(1){
   width: 48px;
@@ -458,7 +465,7 @@ color: #4F5665;
   width: 24px;
   height: 24px;
 }
-.list-trans > p {
+.list-trans >.text-wrapper > p {
   font-weight: 400;
   font-size: 14px;
   color: #4F5665;
@@ -904,6 +911,15 @@ color: #4F5665;
   flex-direction: column;
   gap: 22px;
 }
+.text-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+flex: 1;}
+
+.text-wrapper p {
+  margin: 0;
+}
 .payment-content > p {
   font-weight: 600;
   font-size: 16px;
@@ -1184,30 +1200,58 @@ padding: 32px;
   font-weight: 400;
   font-size: 14px;
 }
-.page{
+.page {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
-.page > p {
-  font-weight: 500;
-  font-size: 12px;
-  color: #4F5665;
+
+/* Text info (showing entries) */
+.page p {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
 }
-.page > div {
-  display: flex;
-  justify-content: end;
-  width: 335px;
-  gap: 12px;
-}
-.page > div > a {
-  font-weight: 500;
-  font-size: 12px;
-}
+
+/* Pagination Container */
 .pagination {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 6px;
+  flex-wrap: wrap;
 }
+
+/* Buttons (prev, next, numbers) */
+.pagination button {
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #ccc;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.pagination button:hover {
+  background-color: #f0f0f0;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+#page-numbers button.active {
+  background-color: #007bff;
+  color: #fff;
+  border-color: #007bff;
+}
+
 
 /* Styling for Prev and Next buttons */
 .pagination button#prev-btn,
@@ -1351,6 +1395,7 @@ padding: 32px;
     display: flex;
     flex-direction: column;
     position: relative;
+    padding: 24px;
     bottom: 43px;
   }
   .table{
@@ -1372,10 +1417,13 @@ padding: 32px;
   .detail-trans {
     width: 100%;
     margin: 0;
-    padding: 16px;
+    padding: 0;
   }
   .top-up-up > img {
     display: none;
+  }
+  .profile-content{
+    padding: 24px;
   }
   .top-up-up{
     width: 100%;
@@ -1498,6 +1546,16 @@ padding: 32px;
   .detail.trans {
     display: block;
   }
+  .page {
+    width: 100%;
+  }
+  .page > p {
+    display: none;
+  }
+
+  .pagination {
+    justify-content: space-between;
+  }
   .trans-sce{
     width: 100%;
   background-color: #2948FF; /* biru tua */
@@ -1582,12 +1640,14 @@ padding: 32px;
 
   .payment {
     width: 100%;
-    max-width: 335px;
+    max-width: 768px;
     border: none;
     padding: 20px;
     margin: 0 auto;
   }
-
+  .table-people > input{
+    width: 100%;
+  }
   .detail-img1,
   .mount > input,
   .payment-img,
@@ -1628,10 +1688,12 @@ padding: 32px;
   .table-people{
     display: flex;
     flex-direction: column;
+    padding: 26px;
   }
-  .list-trans{
-    display: none;
+  .table-trans{
+    padding: 26px;
   }
+
   .list-trans1 > img:nth-child(1){
     display: none;
   }
@@ -1639,9 +1701,13 @@ padding: 32px;
 display: none;
 
   }
-  .page{
-    display: none;
+  .trans {
+border: none;  }
+  .text-wrapper {
+    flex-direction: column;
+    align-items: center;
   }
+
   .people > div > div p{
     font-size: 14px;
   }

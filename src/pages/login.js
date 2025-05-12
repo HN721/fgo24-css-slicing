@@ -8,12 +8,22 @@ form.addEventListener("submit", (e) => {
   const email = document.querySelector("#email").value;
   const password = document.querySelector("#password").value;
   if (convert.email === email && convert.password === password) {
-    alert("Login Berhasil");
-    window.location.href = "../Dashboard/dashboard.html";
-
-    form.reset();
+    Swal.fire({
+      title: "Success Login",
+      text: "Wait a Minute",
+      icon: "success",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        // form.reset();
+        window.location.href = "../Dashboard/dashboard.html";
+      }
+    });
   } else {
-    alert("Password Salah");
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Something went wrong!",
+    });
   }
 });
 function togglePassword(inputId, icon) {

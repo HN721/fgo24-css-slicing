@@ -54,7 +54,6 @@ document.getElementById("submitPin").addEventListener("click", function () {
     let existingTransfers = JSON.parse(localStorage.getItem("transfers")) || [];
     existingTransfers.push(transferData);
     localStorage.setItem("transfers", JSON.stringify(existingTransfers));
-
     document.getElementById("detail").reset();
     document.getElementById("pinModal").style.display = "none";
     document.getElementById("successModal").style.display = "flex";
