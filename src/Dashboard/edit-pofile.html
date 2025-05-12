@@ -152,8 +152,48 @@
                   <img src="../img/people5.png" alt="" />
 
                   <div style="display: flex; gap: 10px; margin-top: 10px">
-                    <button class="btn btn-primary">Change Profile</button>
-                    <button class="btn btn-danger">Delete Profile</button>
+                    <label
+                      style="
+                        background-color: #2f54eb;
+                        color: white;
+                        padding: 13px 16px;
+                        border-radius: 8px;
+                        font-weight: 500;
+                        cursor: pointer;
+                        position: relative;
+                        overflow: hidden;
+                        display: inline-block;
+                      "
+                    >
+                      <span>Change Profile</span>
+                      <input
+                        type="file"
+                        name="profile_picture"
+                        style="
+                          position: absolute;
+                          left: 0;
+                          top: 0;
+                          opacity: 0;
+                          cursor: pointer;
+                          width: 100%;
+                          height: 100%;
+                        "
+                      />
+                    </label>
+
+                    <button
+                      style="
+                        background-color: white;
+                        color: #ff4d4f;
+                        padding: 10px 16px;
+                        border: 1px solid #ff4d4f;
+                        border-radius: 8px;
+                        font-weight: 500;
+                        cursor: pointer;
+                      "
+                    >
+                      Delete Profile
+                    </button>
                   </div>
                 </div>
                 <p class="p-profile">

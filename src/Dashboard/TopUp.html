@@ -3,9 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dasboard E Wallet</title>
+    <title>Dashboard E-Wallet</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="login.css" />
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Bellefair&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Rancho&display=swap"
@@ -33,16 +35,15 @@
   <body>
     <div class="wrap">
       <div class="container">
+        <!-- Navbar -->
         <nav class="navbar">
           <div class="logo">
-            <img src="../icon/logo.png" alt="" />
+            <img src="../icon/logo.png" alt="Logo" />
             <p>E-Wallet</p>
           </div>
-
           <div class="logo-right">
             <p>Ghaluh Wizard</p>
-            <img src="/src/img/orang.png" alt="" />
-
+            <img src="/src/img/orang.png" alt="User Image" />
             <svg
               width="24"
               height="24"
@@ -60,131 +61,163 @@
             </svg>
           </div>
         </nav>
+
+        <!-- Sidebar & Main Content -->
         <div class="num">
+          <!-- Sidebar -->
           <div class="sidebar">
             <div class="sidebar-link">
               <div class="menu">
-                <img class="img-menu" src="../img/dash.png" alt="" />
-                <a href="dashboard.html"> Dashboard</a>
+                <img
+                  class="img-menu"
+                  src="../img/dash.png"
+                  alt="Dashboard Icon"
+                />
+                <a href="dashboard.html">Dashboard</a>
               </div>
               <div class="menu">
-                <img class="img-menu" src="../img/transaksi.png" alt="" /><a
-                  href="Transfer.html"
-                >
-                  Transfer</a
-                >
+                <img
+                  class="img-menu"
+                  src="../img/transaksi.png"
+                  alt="Transfer Icon"
+                />
+                <a href="Transfer.html">Transfer</a>
               </div>
               <div class="menu">
-                <img class="img-menu" src="../img/history.png" alt="" /><a
-                  href="history.html"
-                >
-                  History</a
-                >
+                <img
+                  class="img-menu"
+                  src="../img/history.png"
+                  alt="History Icon"
+                />
+                <a href="history.html">History</a>
               </div>
               <div class="menu">
-                <img class="img-menu" src="../img/topup.png" alt="" /><a
-                  href="TopUp.html"
-                >
-                  Top Up</a
-                >
+                <img
+                  class="img-menu"
+                  src="../img/topup.png"
+                  alt="Top Up Icon"
+                />
+                <a href="TopUp.html">Top Up</a>
               </div>
               <div class="menu">
-                <img class="img-menu" src="../img/profile.png" alt="" /><a
-                  href="edit-pofile.html"
-                >
-                  Profile</a
-                >
+                <img
+                  class="img-menu"
+                  src="../img/profile.png"
+                  alt="Profile Icon"
+                />
+                <a href="edit-pofile.html">Profile</a>
               </div>
               <div class="menu">
-                <img class="img-menu" src="../img/keluar.png" alt="" />
+                <img
+                  class="img-menu"
+                  src="../img/keluar.png"
+                  alt="Logout Icon"
+                />
                 <a href="#">Keluar</a>
               </div>
             </div>
           </div>
+
+          <!-- Top-Up Section -->
           <div class="top-up">
             <div class="top-up-up">
-              <img src="icon/send.png" alt="" />
+              <img src="icon/send.png" alt="Top Up Icon" />
               <p>Top Up Account</p>
             </div>
             <div class="top-content">
+              <!-- Account Info -->
               <div class="information">
                 <p>Account Information</p>
                 <div class="detail-img1">
                   <div>
-                    <img src="../img/people10.png" alt="" />
+                    <img src="../img/people10.png" alt="User Avatar" />
                     <div class="frame">
                       <p>Ghaluh 1</p>
                       <p>(239) 555-0108</p>
                       <button>
-                        <img src="../img/ceklis.png" alt="" />Verified
+                        <img
+                          src="../img/ceklis.png"
+                          alt="Verified Icon"
+                        />Verified
                       </button>
                     </div>
                   </div>
                 </div>
-                <div class="mount">
-                  <p>Amount</p>
-                  <p>
-                    Type the amount you want to transfer to your e-wallet
-                    account
-                  </p>
-                  <input type="text" placeholder="Enter Nominal Transfer" />
-                </div>
-                <div class="method">
-                  <div>
-                    <p>Payment Method</p>
-                    <p>Choose your payment method for top up account</p>
+                <!-- Form -->
+                <form action="">
+                  <div class="mount">
+                    <p>Amount</p>
+                    <p>
+                      Type the amount you want to transfer to your e-wallet
+                      account
+                    </p>
+                    <input
+                      id="amount-input"
+                      type="text"
+                      placeholder="Enter Nominal Transfer"
+                    />
                   </div>
-                  <div class="payment-img">
-                    <input type="radio" />
 
-                    <img src="icon/bri.png" alt="" />
-                    <p>Bank Rakyat Indonesia</p>
-                  </div>
-                  <div class="payment-img1">
-                    <input type="radio" />
-                    <img src="icon/dana.png" alt="" />
-                    <p>DANA</p>
-                  </div>
-                  <div class="payment-img2">
-                    <input type="radio" />
+                  <div class="method">
+                    <div>
+                      <p>Payment Method</p>
+                      <p>Choose your payment method for top up account</p>
+                    </div>
 
-                    <img src="icon/bca.png" alt="" />
-                    <p>Bank Central Asia</p>
+                    <label class="payment-img">
+                      <input type="radio" name="payment" />
+                      <img src="icon/bri.png" alt="BRI" />
+                      <p>Bank Rakyat Indonesia</p>
+                    </label>
+                    <label class="payment-img1">
+                      <input type="radio" name="payment" />
+                      <img src="icon/dana.png" alt="DANA" />
+                      <p>DANA</p>
+                    </label>
+                    <label class="payment-img2">
+                      <input type="radio" name="payment" />
+                      <img src="icon/bca.png" alt="BCA" />
+                      <p>Bank Central Asia</p>
+                    </label>
+                    <label class="payment-img3">
+                      <input type="radio" name="payment" />
+                      <img src="icon/gopay.png" alt="GoPay" />
+                      <p>GoPay</p>
+                    </label>
+                    <label class="payment-img4">
+                      <input type="radio" name="payment" />
+                      <img src="icon/ovo.png" alt="OVO" />
+                      <p>OVO</p>
+                    </label>
                   </div>
-                  <div class="payment-img3">
-                    <input type="radio" />
-
-                    <img src="icon/gopay.png" alt="" />
-                    <p>GoPay</p>
-                  </div>
-                  <div class="payment-img4">
-                    <input type="radio" />
-
-                    <img src="icon/ovo.png" alt="" />
-                    <p>OvO</p>
-                  </div>
-                </div>
+                </form>
               </div>
+
+              <!-- Payment Summary -->
               <div class="payment">
                 <div class="payment-content">
                   <p>Payment</p>
                   <div class="oder-payment">
                     <p>Order</p>
-                    <p>Idr. 40.000</p>
+                    <p>Idr. 0</p>
                   </div>
                   <div class="oder-payment">
                     <p>Delivery</p>
-                    <p>Idr. 40.000</p>
+                    <p>Idr. 0</p>
                   </div>
                   <div class="oder-payment">
                     <p>Tax</p>
-                    <p>Idr. 4000</p>
+                    <p>Idr. 0</p>
                   </div>
                   <div class="oder-payment">
                     <p>Sub Total</p>
-                    <p>Idr.44.000</p>
+                    <p>Idr. 0</p>
                   </div>
-                  <button style="width: 100%" class="btn-primary">
+                  <button
+                    id="submit-button"
+                    class="btn-primary"
+                    style="width: 100%"
+                  >
                     Submit
                   </button>
                   <p style="font-weight: 400; font-size: 14px; color: #4f5665">
@@ -195,7 +228,12 @@
             </div>
           </div>
         </div>
+        <!-- End .num -->
       </div>
+      <!-- End .container -->
     </div>
+    <!-- End .wrap -->
+
+    <script src="topup.js"></script>
   </body>
 </html>

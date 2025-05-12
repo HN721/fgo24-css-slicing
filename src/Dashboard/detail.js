@@ -23,30 +23,42 @@ if (name && phone && image) {
   detailBox.innerHTML = `<p>User tidak ditemukan</p>`;
 }
 
+let transferData = null; // global
+
 document.getElementById("detail").addEventListener("submit", function (e) {
   e.preventDefault();
 
   const amount = document.getElementById("amount").value.trim();
   const note = document.getElementById("note").value.trim();
 
-  const transferData = {
+  transferData = {
     amount,
+    note,
     name,
     phone,
     image,
     date: new Date().toISOString(),
   };
 
-  let existingTransfers = JSON.parse(localStorage.getItem("transfers")) || [];
-
-  existingTransfers.push(transferData);
-
-  localStorage.setItem("transfers", JSON.stringify(existingTransfers));
-  document.getElementById("detail").reset();
-  document.getElementById("successModal").style.display = "flex";
+  document.getElementById("pinModal").style.display = "flex";
 });
-const button = document.querySelector(".btn-contact");
+document.getElementById("submitPin").addEventListener("click", function () {
+  const pinInputs = document.querySelectorAll(".pin-inputs input");
+  let enteredPin = "";
 
-button.addEventListener("click", () => {
-  window.location.href = "dashboard.html";
+  pinInputs.forEach((input) => {
+    enteredPin += input.value;
+  });
+
+  if (enteredPin === "123456") {
+    let existingTransfers = JSON.parse(localStorage.getItem("transfers")) || [];
+    existingTransfers.push(transferData);
+    localStorage.setItem("transfers", JSON.stringify(existingTransfers));
+
+    document.getElementById("detail").reset();
+    document.getElementById("pinModal").style.display = "none";
+    document.getElementById("successModal").style.display = "flex";
+  } else {
+    alert("PIN salah, coba lagi.");
+  }
 });

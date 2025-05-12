@@ -12,7 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "numeral": "^2.0.6",
     "serve": "^14.2.4"
-  },
-  "devDependencies": {}
+  }
 }

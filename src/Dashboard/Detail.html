@@ -38,6 +38,58 @@
     />
   </head>
   <style>
+    .modal,
+    .success-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: none; /* Hidden by default */
+      justify-content: center;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 999;
+    }
+
+    .modal-content,
+    .success-content {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+      max-width: 400px;
+      width: 90%;
+    }
+
+    .pin-inputs input {
+      width: 40px;
+      height: 50px;
+      margin: 5px;
+      font-size: 20px;
+      text-align: center;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      margin-top: 20px;
+      background-color: #2f54eb;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .reset-link {
+      margin-top: 10px;
+    }
+
+    .reset-link a {
+      color: #2f54eb;
+      text-decoration: none;
+    }
     .modal-overlay {
       position: fixed;
       top: 0;
@@ -242,6 +294,28 @@
             </div>
           </div>
           <div class="Transactoin">
+            <div class="modal" id="pinModal">
+              <div class="modal-content">
+                <h3>TRANSFER TO GHALUH 1</h3>
+                <h1>Enter Your Pin 👋</h1>
+                <p>Enter Your Pin For Transaction</p>
+
+                <div class="pin-inputs">
+                  <input type="text" maxlength="1" />
+                  <input type="text" maxlength="1" />
+                  <input type="text" maxlength="1" />
+                  <input type="text" maxlength="1" />
+                  <input type="text" maxlength="1" />
+                  <input type="text" maxlength="1" />
+                </div>
+
+                <button id="submitPin">Submit PIN</button>
+
+                <div class="reset-link">
+                  Forgot Your Pin? <a href="#">Reset</a>
+                </div>
+              </div>
+            </div>
             <div class="modal-overlay" id="successModal" style="display: none">
               <div class="modal1">
                 <div class="modal-content1">
