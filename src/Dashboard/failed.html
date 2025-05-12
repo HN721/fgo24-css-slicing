@@ -1,119 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dasboard E Wallet</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="login.css" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bellefair&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Rancho&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bellefair&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Rancho&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bellefair&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Rancho&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bellefair&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Rancho&display=swap" rel="stylesheet">
-</head>
-<body>
-  <div class="wrap">
-    <div class="container">
-      <nav class="navbar">
-  <div class="logo">
-    <img src="../icon/logo.png" alt="">
-    <p>E-Wallet</p>
-  </div>
-  <div class="logo-right">
-    <p>Ghaluh Wizard</p>
-    <img src="/src/img/orang.png" alt="">
-  </div>
-      </nav>
-      <div class="num">
-        <div class="sidebar">
-          <div class="sidebar-link">
-          <div class="menu">
-            <img class="img-menu" src="../img/dashboard.png" alt=""> <p>Dashboard</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dasboard E Wallet</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="login.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bellefair&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Rancho&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bellefair&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Rancho&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bellefair&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Rancho&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bellefair&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Rancho&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+
+    .modal1 {
+      background-color: white;
+      padding: 30px 20px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      width: 90%;
+      max-width: 400px;
+      text-align: center;
+      font-family: "Inter", sans-serif;
+    }
+
+    .modal-title {
+      font-size: 20px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .img-c {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .success-image {
+      width: 150px;
+      height: auto;
+    }
+
+    .success-text {
+      font-size: 24px;
+      font-weight: bold;
+      color: #1abc9c;
+      margin-bottom: 10px;
+    }
+
+    .desc-text {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 25px;
+      padding: 0 10px;
+    }
+
+    .btn-contact,
+    .btn-conta {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      margin: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-contact {
+      background-color: #1abc9c;
+      color: white;
+    }
+
+    .btn-contact:hover {
+      background-color: #17a589;
+    }
+
+    .btn-conta {
+      background-color: #ecf0f1;
+      color: #333;
+    }
+
+    .btn-conta:hover {
+      background-color: #dcdde1;
+    }
+  </style>
+  <body>
+    <div class="wrap">
+      <div class="container">
+        <nav class="navbar">
+          <div class="logo">
+            <img src="../icon/logo.png" alt="" />
+            <p>E-Wallet</p>
           </div>
-         <div class="menu"><img class="img-menu" src="../img/transaksi.png" alt=""><a href="Transfer.html"> Transfer</a></div> 
-          <div class="menu"><img class="img-menu" src="../img/history.png" alt=""><a href="history.html"> History</a></div>
-          <div class="menu"><img class="img-menu" src="../img/topup.png" alt=""><a href="TopUp.html"> Top Up</a></div>
-          <div class="menu"><img class="img-menu" src="../img/profile.png" alt=""><a href="edit-pofile.html"> Profile</a></div>
-          <div class="menu"><img class="img-menu" src="../img/keluar.png" alt=""> <a href="#">Keluar</a></div>
+          <div class="logo-right">
+            <p>Ghaluh Wizard</p>
+            <img src="/src/img/orang.png" alt="" />
           </div>
-  
-        </div>
-       <div class="Transactoin">
-        <!-- Modal -->
-        <div class="modal-overlay"> <div class="modal1">
-            <div class="modal-content1">
-              <p class="modal-title">Transfer to Ghaluh 1</p>
-          
-              <div class="img-c">
-                <img class="success-image" src="../img/failed.png" alt="Success Illustration">
+        </nav>
+        <div class="num">
+          <div class="sidebar">
+            <div class="sidebar-link">
+              <div class="menu">
+                <img class="img-menu" src="../img/dashboard.png" alt="" />
+                <p>Dashboard</p>
               </div>
-          
-              <p class="success-text">Oops Transfer Failed!</p>
-              <p class="desc-text">Sorry Theres is an issue for your transfer, try again later !</p>
-          
-              <button class="btn-contact">Try Again</button>
-              <button class="btn-conta">Back To Dashboard</button>
+              <div class="menu">
+                <img class="img-menu" src="../img/transaksi.png" alt="" /><a
+                  href="Transfer.html"
+                >
+                  Transfer</a
+                >
+              </div>
+              <div class="menu">
+                <img class="img-menu" src="../img/history.png" alt="" /><a
+                  href="#"
+                >
+                  History</a
+                >
+              </div>
+              <div class="menu">
+                <img class="img-menu" src="../img/topup.png" alt="" /><a
+                  href="#"
+                >
+                  Top Up</a
+                >
+              </div>
+              <div class="menu">
+                <img class="img-menu" src="../img/profile.png" alt="" /><a
+                  href="#"
+                >
+                  Profile</a
+                >
+              </div>
+              <div class="menu">
+                <img class="img-menu" src="../img/keluar.png" alt="" />
+                <a href="#">Keluar</a>
+              </div>
             </div>
           </div>
-s          
-          </div>
-       
-  
-        <div class="trans-sce">
-            <img src="../img/pesawat-biru.png" alt="" srcset="">
-            <p>Transfer Money</p>
-        </div>
-        <div class="find">
-            <div class="people-find">
-                <img src="../img/1.png" alt="">
-                <p>Find People</p>
-            </div>
-            <div class="people-find">
-                <img src="../img/2.png" alt="">
-                <p>Set Nominal</p>
-            </div>
-            <div class="people-find">
-                <img src="../img/3.png" alt="">
-                <p>Finish</p>
-            </div>
-        </div>
-       <div class="detail-trans">
-        <div class="detail-box">
-            <p>People Information</p>
-            <div class="detail-img">
-               <div>
-                <img src="../img/people10.png" alt="">
-                <div class="frame">
-                    <p>Ghaluh 1</p>
-                    <p>(239) 555-0108</p>
-                    <button><img src="../img/ceklis.png" alt="">Verified</button>
+          <div class="Transactoin">
+            <!-- Modal -->
+            <div class="modal-overlay">
+              <div class="modal1">
+                <div class="modal-content1">
+                  <p class="modal-title">Transfer to Ghaluh 1</p>
+
+                  <div class="img-c">
+                    <img
+                      class="success-image"
+                      src="../img/contact.png"
+                      alt="Success Illustration"
+                    />
+                  </div>
+
+                  <p class="success-text">Yeay, Success!</p>
+                  <p class="desc-text">
+                    Thank you for using this application for your financial
+                    transactions.
+                  </p>
+
+                  <button class="btn-contact">Done</button>
+                  <button class="btn-conta">Transfer Again</button>
                 </div>
-               </div>
-                <img src="../img/star.png" alt="" srcset="">
+              </div>
+              s
             </div>
-            <div class="Amount">
-                <p>Amount</p>
-                <p>Type the amount you want to transfer and then press continue to the next steps.</p>
-                <input type="text" placeholder="Enter Nominal Transfer">
+
+            <div class="trans-sce">
+              <img src="../img/pesawat-biru.png" alt="" srcset="" />
+              <p>Transfer Money</p>
             </div>
-            <div class="note">
-                <p>Notes</p>
-                <p>You can add some notes for this transfer such as payment coffee or something</p>
-                <input type="text" placeholder="Enter Some Notes">
+            <div class="find">
+              <div class="people-find">
+                <img src="../img/1.png" alt="" />
+                <p>Find People</p>
+              </div>
+              <div class="people-find">
+                <img src="../img/2.png" alt="" />
+                <p>Set Nominal</p>
+              </div>
+              <div class="people-find">
+                <img src="../img/3.png" alt="" />
+                <p>Finish</p>
+              </div>
             </div>
-            <button>Submit & Transfer</button>
+            <div class="detail-trans">
+              <div class="detail-box">
+                <p>People Information</p>
+                <div class="detail-img">
+                  <div>
+                    <img src="../img/people10.png" alt="" />
+                    <div class="frame">
+                      <p>Ghaluh 1</p>
+                      <p>(239) 555-0108</p>
+                      <button>
+                        <img src="../img/ceklis.png" alt="" />Verified
+                      </button>
+                    </div>
+                  </div>
+                  <img src="../img/star.png" alt="" srcset="" />
+                </div>
+                <div class="Amount">
+                  <p>Amount</p>
+                  <p>
+                    Type the amount you want to transfer and then press continue
+                    to the next steps.
+                  </p>
+                  <input type="text" placeholder="Enter Nominal Transfer" />
+                </div>
+                <div class="note">
+                  <p>Notes</p>
+                  <p>
+                    You can add some notes for this transfer such as payment
+                    coffee or something
+                  </p>
+                  <input type="text" placeholder="Enter Some Notes" />
+                </div>
+                <button>Submit & Transfer</button>
+              </div>
+            </div>
+          </div>
         </div>
-       </div>
-       </div> 
       </div>
     </div>
-  </div>
-</body>
+  </body>
 </html>

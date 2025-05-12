@@ -111,7 +111,7 @@ const searchInput = document.querySelector("#search");
 
 const itemsPerPage = 5;
 let currentPage = 1;
-let filteredPeople = [...people]; // Initially, all people
+let filteredPeople = [...people];
 
 function displayPeople(page, peopleList) {
   container.innerHTML = ""; // Clear previous content
@@ -120,9 +120,13 @@ function displayPeople(page, peopleList) {
   const paginatedPeople = peopleList.slice(start, end);
 
   paginatedPeople.forEach((item) => {
-    const listTrans = document.createElement("div");
+    const listTrans = document.createElement("a");
     listTrans.classList.add("list-trans");
-
+    listTrans.href = `/src/Dashboard/detail.html?name=${encodeURIComponent(
+      item.name
+    )}&phone=${encodeURIComponent(item.phone)}&image=${encodeURIComponent(
+      item.image
+    )}`;
     const img = document.createElement("img");
     img.src = item.image;
     img.alt = item.name;

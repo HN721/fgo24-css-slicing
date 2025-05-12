@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "This repository contains the HTML and CSS code for a fully responsive E-Wallet Website, showcasing both a modern landing page and a clean dashboard interface. The layout was carefully sliced from a design mockup, ensuring pixel-perfect accuracy and a consistent user experience across devices.",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "npm start live-server"
