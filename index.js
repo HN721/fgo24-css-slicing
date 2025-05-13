@@ -186,7 +186,6 @@ function searchData() {
   displayPeople(currentPage, filteredPeople);
 }
 
-// Event listeners
 prevBtn.addEventListener("click", () => {
   if (currentPage > 1) {
     currentPage--;

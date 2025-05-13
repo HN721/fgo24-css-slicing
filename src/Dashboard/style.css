@@ -4,11 +4,16 @@
   padding: 0;
   font-family: "Montserrat", sans-serif;
 }
+
   .container {
     display: flex;
     flex-direction: column;
     /* height: 100vh; */
   } 
+  a{
+    text-decoration: none;
+    color: #4F5665;
+  }
   .container1 {
     display: flex;
     flex-direction: column;
@@ -113,7 +118,7 @@
   gap: 16px;
 }
 .content-right{
-  width: 700px;
+  width: 100%;
   height: 173px;
   border: 1px solid #E8E8E8;
   border-radius: 6px;
@@ -121,7 +126,7 @@
 .content-left{
   display: flex;
   gap: 12px;
-  margin: 48px;
+  margin: 28px;
 
 }
 #Service > div {
@@ -145,14 +150,13 @@
   display: flex;
 }
 .chart-child{
-  margin-left:48px;
-  width: 700px;
+  margin-left:28px;
   height: 574px;
   border: 1px solid #E8E8E8;
   border-radius: 3px;
 }
 .trans{
-  width: 341px;
+  width: auto;
   height: 574px;
   border: 1px solid #E8E8E8;
   border-radius: 3px;
@@ -395,6 +399,7 @@ color: #4F5665;
   display: flex;
   flex-direction: column;
   padding: 23px;
+  width: 100%;
 }
 .trans-sce{
   display: flex;
@@ -431,7 +436,7 @@ color: #4F5665;
   font-size: 16px;
 }
 .table{
-  width:1061px;
+  width:100%;
   height: 720px;
   border: 1px solid #E8E8E8;
   padding: 32px;
@@ -654,6 +659,9 @@ color: #4F5665;
   color: #8b8b8b;
   margin-bottom: 10px;
 }
+.profile-input{
+  width: 100%;
+}
 
 /* Title */
 .modal-content h1 {
@@ -839,7 +847,7 @@ color: #4F5665;
   font-size: 16px;
 }
 .information{
-  width: 700px;
+  width: 100%;
   height: 792px;
   display: flex;
   flex-direction: column;
@@ -900,7 +908,7 @@ color: #4F5665;
 }
 
 .payment{
-  width: 341px;
+  width: 100%;
   height: 378px;
   border: 1px solid #E8E8E8;
   padding: 23px;
@@ -1030,6 +1038,9 @@ flex: 1;}
   width: 38px;
   height: 12px;
 }
+.profile{
+  width: 100%;
+}
 
 .profile > div:nth-child(1){
   display: flex;
@@ -1037,17 +1048,19 @@ flex: 1;}
   padding: 32px;
 }
 .profile-content{
-  margin: 23px;
-  width: 1056px;
+  padding: 23px;
+  width: 100%;
   height: 746px;
 
-  border: 1px solid #E8E8E8;
 }
 .profile-content-child{
+  width: 100%;
   padding: 12px;
   display: flex;
   flex-direction: column;
   gap: 12px;
+  border: 1px solid #E8E8E8;
+
 }
 .p-profile1{
   font-weight: 600;
@@ -1093,7 +1106,7 @@ flex: 1;}
   display: flex;
   flex-direction: column;
   gap: 12px;
-  width: 983px;
+  width: 100%;
   height: 77px;
  }
  .profile-child > p {
@@ -1112,7 +1125,7 @@ flex: 1;}
   align-items: center;
   justify-content: center;
   gap: 8px;
-  width: 983px;
+  width: 100%;
   height: 45px;
   background-color: #2948FF;
   color: white;
@@ -1476,7 +1489,9 @@ padding: 32px;
     z-index: 999; /* agar tetap di atas elemen lain */
 
   }
-
+  .profile-content-child{
+    padding: 12px;
+  }
   .img-menu {
     width: 24px;
     height: 24px;
