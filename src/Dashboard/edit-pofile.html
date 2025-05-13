@@ -29,6 +29,7 @@
       href="https://fonts.googleapis.com/css2?family=Bellefair&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Rancho&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
   <body>
     <div class="wrap">
@@ -200,12 +201,13 @@
                 <p class="p-profile">
                   The profile picture must be 512 x 512 pixels or less
                 </p>
-                <form action="" id="form-profile">
+                <form id="form-profile">
                   <div class="profile-input">
                     <div class="profile-child">
                       <p>Full Name</p>
                       <img src="icon/icon-user.png" alt="" />
                       <input
+                        id="full_name"
                         type="text"
                         name="full_name"
                         placeholder="Enter your full name"
@@ -216,6 +218,7 @@
                       <img src="icon/phone.png" alt="" />
                       <input
                         type="tel"
+                        id="phone"
                         name="phone"
                         placeholder="Enter your phone number"
                       />
@@ -225,6 +228,7 @@
                       <img src="icon/email.png" alt="" />
                       <input
                         type="email"
+                        id="email"
                         name="email"
                         placeholder="Enter your email"
                       />
@@ -251,4 +255,5 @@
       </div>
     </div>
   </body>
+  <script src="profile.js"></script>
 </html>

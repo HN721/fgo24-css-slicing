@@ -109,7 +109,7 @@
   }
   .btn-primary1{
     height: 50px;
-    width: 225px;
+    width: 100%;
     font-size: 19px;
     color: #2948FF;
     font-weight: 500;
@@ -132,7 +132,7 @@
   .btn-secondary1{
     margin-left: 15px;
     height: 50px;
-    width: 225px;
+    width: 100%;
     font-size: 19px;
     color: white;
     font-weight: 500;
@@ -526,10 +526,9 @@ footer .copyright {
 
 /* BENEFIT END */
 
-@media (max-width:808px){
+@media (max-width:768px){
   .main{
     width: 100%;
-    max-width: 808px;
     height: 800px;
   }
   .btn{
@@ -555,7 +554,7 @@ footer .copyright {
   .handphone > img {
     position: relative;
     bottom: 22px;
-    width: 300px;
+    width: 100%;
     height: 300px;
   }
   .people > img{
@@ -570,6 +569,7 @@ footer .copyright {
     padding: 0;
     margin:
      0;
+     width: 100%;
   }
   .banner{
     width: 100%;
@@ -666,15 +666,17 @@ width: 100%;    padding: 56px 21px;
   height: 90%;
 }
 .hero-right{
-  width: 333px;
+  width: 100%;
   height: 410px;
+  text-align: center;
+  padding: 12px;
 }
 .hero-right > p:nth-child(1){
 font-weight: 500;
 font-size: 32px;
 }
 .hero-right > p:nth-child(2){
-  width: 333px;
+  width: 100%;
   font-weight: 400;
   font-size: 16px;
   }
@@ -694,7 +696,9 @@ font-size: 32px;
 .baner-left{
   padding: 0 24px;
   text-align: center;
+  width: 100%;
 }
+
 .baner-left > p:first-child{
   text-align: center;
   font-weight: 500;
@@ -713,17 +717,22 @@ font-size: 32px;
 .main5{
   width: 100%;
 }
+.p-2{
+  width: 100%;
+  padding: 12px;
+}
 .p-2 > p:first-child{
   font-size: 32px;
+  font-weight: 500;
 }
 .p-2 > p:last-child{
   padding: 0 22px;
   font-size: 16px;
+  font-weight: 400;
 }
 .box{
-  width: 330px;
-  margin: 12px 0;
-  padding: 0;
+  width: 100%;
+  padding: 12px;
 }
 .box > p:last-child{
   text-align: center;
@@ -746,9 +755,28 @@ font-size: 32px;
 }
 footer{
   width: 100%;
+  padding: 12px;
 }
+.footer-section{
+  display: block;
+}
+
 .container-box{
   width: 100%;
   margin: 0;
+  padding: 12px;
+}
+.donwload-app>div:nth-child(2){
+  padding: 16px;
+}
+.donwload-app>div>div>button:nth-child(1){
+  
+  font-size: 14px;
+  font-weight: 500;
+}
+.donwload-app>div>div>button:nth-child(2){
+    
+  font-size: 14px;
+  font-weight: 500;
 }
 }

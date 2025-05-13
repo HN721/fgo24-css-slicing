@@ -156,6 +156,10 @@
   border-radius: 3px;
 }
 .trans{
+  background: #fff;
+  border-radius: 12px;
+  padding: 12px;
+  font-family: sans-serif;
   width: auto;
   height: 574px;
   border: 1px solid #E8E8E8;
@@ -317,29 +321,25 @@ color: #4F5665;
  width: 598px;
  height: 381.55035400390625px;
 }
-.trans-child{
+/* .trans-child{
   display: flex;
   justify-content: space-between;
   padding:  20px 10px;
-}
+} */
 .trans-child > p{
   font-weight: 600;
   font-size: 16px;
   color: #0B132A;
 }
-.trans {
-  background: #fff;
-  border-radius: 12px;
-  padding: 12px;
-  font-family: sans-serif;
-}
 
-/* .trans-child {
+
+.trans-child {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 12px;
   margin-bottom: 16px;
-} */
+}
 
 .trans-child p {
   margin: 0;
@@ -498,12 +498,10 @@ color: #4F5665;
   border-radius: 6px;
 }
 .detail-trans{
-  width: 1061px;
+  width: 100%;
   height: 747px;
-  border: 1px solid #E8E8E8;
 }
 .detail-box{
-  padding: 27px;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -586,7 +584,7 @@ color: #4F5665;
   gap: 12px;
 }
 .Amount > input {
-  width: 994px;
+  width: auto;
   height: 62px;
   border-radius: 6px;
   border: 1px solid #E8E8E8;
@@ -614,7 +612,7 @@ color: #4F5665;
   text-align: start;
 }
 .detail-box > button{
-  width: 994px;
+  width: auto;
   height: 45px;
   background-color: #007bff;
   color: #fff;

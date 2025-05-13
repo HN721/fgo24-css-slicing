@@ -61,3 +61,7 @@ document.getElementById("submitPin").addEventListener("click", function () {
     alert("PIN salah, coba lagi.");
   }
 });
+const done = document.querySelector(".btn-contact");
+done.addEventListener("click", () => {
+  window.location.href = "dashboard.html";
+});
