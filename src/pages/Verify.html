@@ -5,6 +5,147 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Verify</title>
     <link rel="stylesheet" href="verify.css" />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Nunito Sans", sans-serif;
+      }
+
+      body {
+        background-color: #396afc;
+        height: 100vh;
+      }
+
+      .container {
+        display: flex;
+      }
+
+      .login-left,
+      .login-right {
+        width: 50%;
+      }
+
+      .login-left {
+        background-color: white;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 40px;
+      }
+
+      .form-wrapper {
+        width: 70%;
+      }
+
+      .logo-section {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 25px;
+      }
+
+      .logo {
+        width: 25px;
+      }
+
+      .brand-name {
+        color: #396afc;
+        font-weight: 600;
+        font-size: 18px;
+      }
+
+      h1 {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+
+      .subtitle {
+        font-size: 14px;
+        color: #555;
+        margin-bottom: 30px;
+      }
+
+      .pin-inputs {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+      }
+
+      .pin-inputs input {
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+        text-align: center;
+        border: none; /* Remove default border */
+        border-bottom: 2px solid #396afc; /* Add blue bottom border */
+        border-radius: 0; /* Remove border radius for a flat look */
+        margin-right: 10px;
+        background: transparent; /* Transparent background */
+        outline: none; /* Remove outline on focus */
+      }
+
+      .pin-inputs input:focus {
+        border-bottom: 2px solid #305bd4; /* Slightly darker blue on focus */
+      }
+
+      .pin-inputs input:last-child {
+        margin-right: 0;
+      }
+
+      button {
+        width: 100%;
+        background-color: #396afc;
+        color: white;
+        padding: 12px;
+        font-size: 16px;
+        font-weight: 600;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #305bd4;
+      }
+
+      .forgot-pin {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 14px;
+      }
+
+      .forgot-pin a {
+        text-decoration: none;
+        color: #396afc;
+        font-weight: 600;
+      }
+
+      .login-right img {
+        width: 627px;
+        height: 859px;
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+        }
+        .login-left,
+        .login-right {
+          width: 100%;
+          border-radius: 0;
+        }
+        .login-right img {
+          border-radius: 0;
+          height: auto;
+        }
+      }
+    </style>
   </head>
   <body>
     <div class="container">
@@ -18,8 +159,13 @@
           <p class="subtitle">
             Please save your pin because this is important.
           </p>
-          <form>
-            <input type="number" placeholder="1" required />
+          <form id="pin-form">
+            <div class="pin-inputs">
+              <input type="number" id="pin-1" maxlength="1" required />
+              <input type="number" id="pin-2" maxlength="1" required />
+              <input type="number" id="pin-3" maxlength="1" required />
+              <input type="number" id="pin-4" maxlength="1" required />
+            </div>
             <button type="submit">Submit</button>
           </form>
           <div class="forgot-pin">
@@ -31,5 +177,33 @@
         <img src="assets/people.png" alt="Illustration" />
       </div>
     </div>
+
+    <script>
+      // Function to save the PIN to local storage
+      function savePinToLocalStorage(pin) {
+        localStorage.setItem("userPin", pin);
+      }
+
+      // Handle form submission
+      document
+        .getElementById("pin-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          const pin = [
+            document.getElementById("pin-1").value,
+            document.getElementById("pin-2").value,
+            document.getElementById("pin-3").value,
+            document.getElementById("pin-4").value,
+          ].join("");
+
+          if (pin.length === 4) {
+            savePinToLocalStorage(pin);
+            window.location.href = "../Dashboard/dashboard.html";
+          } else {
+            alert("Please enter a 4-digit PIN.");
+          }
+        });
+    </script>
   </body>
 </html>

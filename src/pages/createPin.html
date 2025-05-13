@@ -3,7 +3,122 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Create-Pin</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito+Sans:600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Plus+Jakarta+Sans:400,500&display=swap"
+      rel="stylesheet"
+    />
+    <link href="createPin.css" rel="stylesheet" />
+    <title>Enter Pin</title>
   </head>
-  <body></body>
+  <body>
+    <main class="enter-pin-mobile">
+      <div class="container-left enter-pin-mobile-left">
+        <div class="container-left-child">
+          <div class="logo">
+            <img src="../src/logo-icon.png" alt="logo-icon" />
+            <span>E-Wallet</span>
+          </div>
+          <h2>Enter Your Pin 👋</h2>
+          <p>Please save your pin because this so important.</p>
+          <form class="enter-pin">
+            <div class="pin-row-container">
+              <div class="enter-pin-row">
+                <input
+                  type="number"
+                  id="pin1"
+                  name="pin1"
+                  class="pin-input"
+                  placeholder=""
+                  maxlength="1"
+                  min="1"
+                  max="9"
+                />
+              </div>
+              <div class="enter-pin-row">
+                <input
+                  type="number"
+                  id="pin2"
+                  name="pin2"
+                  class="pin-input"
+                  placeholder=""
+                  maxlength="1"
+                  min="1"
+                  max="9"
+                />
+              </div>
+              <div class="enter-pin-row">
+                <input
+                  type="number"
+                  id="pin3"
+                  name="pin3"
+                  class="pin-input"
+                  placeholder=""
+                  maxlength="1"
+                  min="1"
+                  max="9"
+                />
+              </div>
+              <div class="enter-pin-row">
+                <input
+                  type="number"
+                  id="pin4"
+                  name="pin4"
+                  class="pin-input"
+                  placeholder=""
+                  maxlength="1"
+                  min="1"
+                  max="9"
+                />
+              </div>
+              <div class="enter-pin-row">
+                <input
+                  type="number"
+                  id="pin5"
+                  name="pin5"
+                  class="pin-input"
+                  placeholder=""
+                  maxlength="1"
+                  min="1"
+                  max="9"
+                />
+              </div>
+              <div class="enter-pin-row">
+                <input
+                  type="number"
+                  id="pin6"
+                  name="pin6"
+                  class="pin-input"
+                  placeholder=""
+                  maxlength="1"
+                  min="1"
+                  max="9"
+                />
+              </div>
+            </div>
+            <button class="btn-register" type="submit">
+              <span>Submit</span>
+            </button>
+          </form>
+          <span class="login-link"
+            >Forgot Your Pin? <a href="forgot_password.html">Reset</a></span
+          >
+        </div>
+      </div>
+      <div class="container-right">
+        <img
+          class="container-right-img"
+          src="../src/glassesguy.png"
+          alt="glassesguy"
+        />
+      </div>
+    </main>
+  </body>
 </html>

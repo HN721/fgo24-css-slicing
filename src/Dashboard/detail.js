@@ -28,7 +28,9 @@ let transferData = null; // global
 document.getElementById("detail").addEventListener("submit", function (e) {
   e.preventDefault();
 
-  const amount = document.getElementById("amount").value.trim();
+  const amounts = document.getElementById("amount").value.trim();
+  const amount = parseFloat(amounts.replace(/[^0-9]/g, "")) || 0;
+
   const note = document.getElementById("note").value.trim();
 
   transferData = {
@@ -56,12 +58,52 @@ document.getElementById("submitPin").addEventListener("click", function () {
     localStorage.setItem("transfers", JSON.stringify(existingTransfers));
     document.getElementById("detail").reset();
     document.getElementById("pinModal").style.display = "none";
-    document.getElementById("successModal").style.display = "flex";
+    Swal.fire({
+      title: `TRANSFER TO ${name} `,
+      html: `
+        <img src="../img/contact.png" alt="Custom image" width="200" height="200" style="margin-bottom: 20px;" />
+        <h2 style="margin: 0; font-size: 24px;">Yeay Transfer <span style="color: green;">Success</span></h2>
+        <p style="margin-top: 8px; color: #666;">Thank you for using this application for your financial</p>
+      `,
+      showCancelButton: true,
+      confirmButtonText: "Done",
+      cancelButtonText: "Transfer Again",
+      customClass: {
+        popup: "custom-popup",
+        confirmButton: "custom-confirm-btn",
+        cancelButton: "custom-cancel-btn",
+      },
+    }).then((result) => {
+      if (result.isConfirmed) {
+        window.location.href = "dashboard.html";
+      } else if (result.dismiss === Swal.DismissReason.cancel) {
+        window.location.href = "transfer.html";
+      }
+    });
   } else {
-    alert("PIN salah, coba lagi.");
+    document.getElementById("pinModal").style.display = "none";
+
+    Swal.fire({
+      title: `TRANSFER TO ${name} `,
+      html: `
+        <img src="../img/failed.png" alt="Custom image" width="200" height="200" style="margin-bottom: 20px;" />
+        <h2 style="margin: 0; font-size: 24px;">Oops Transfer <span style="color: red;">Failed</span></h2>
+        <p style="margin-top: 8px; color: #666;">Sorry Theres is an issue for your transfer, try again later !</p>
+      `,
+      showCancelButton: true,
+      confirmButtonText: "Try Again",
+      cancelButtonText: "Back to Dashboard",
+      customClass: {
+        popup: "custom-popup",
+        confirmButton: "custom-confirm-btn",
+        cancelButton: "custom-cancel-btn",
+      },
+    }).then((result) => {
+      if (result.isConfirmed) {
+        window.location.href = "transfer.html";
+      } else if (result.dismiss === Swal.DismissReason.cancel) {
+        window.location.href = "dashboard.html";
+      }
+    });
   }
-});
-const done = document.querySelector(".btn-contact");
-done.addEventListener("click", () => {
-  window.location.href = "dashboard.html";
 });

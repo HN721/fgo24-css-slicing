@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #2948FF;
+    margin: 0;
+    min-height: 100vh; 
+}
+
+h2 {
+    color: #0B132A;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 100%;
+}
+
+p {
+    color: #4F5665;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 166%;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+    flex-direction: column;
+}
+
+.container-left {
+    background-color: #FFFFFF;
+    padding: 60px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+input[type="number"].pin-input {
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    text-align: center;
+    border: none;
+    border-bottom: 1px solid #E8E8E8;
+    margin: 0 10px;
+    color: black;
+}
+
+input[type="number"].pin-input:focus {
+    outline: none;
+    border-bottom: 2px solid #007bff;
+}
+
+.btn-register {
+    margin-top: 12px;
+    border-radius: 6px;
+    padding: 10px;
+    background: #2948FF;
+    border: none;
+    width: 100%;
+}
+
+.btn-register span {
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+}
+
+.btn-register:hover {
+    background-color: #1435ee;
+}
+
+@media (max-width: 768px) {
+    .container-left {
+        padding: 30px;
+    }
+    .container-right {
+        display: none;
+    }
+    body {
+        background-color: #2948FF;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+  
+    input[type="number"].pin-input {
+        width: 100%;
+        font-size: 26px;
+    }
+}

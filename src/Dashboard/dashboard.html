@@ -40,7 +40,7 @@
             <p>E-Wallet</p>
           </div>
 
-          <div class="logo-right">
+          <div class="logo-right" onclick="toggleDropdown()">
             <svg
               width="21"
               height="21"
@@ -116,6 +116,13 @@
                 stroke-linejoin="round"
               />
             </svg>
+            <div class="dropdown">
+              <div class="dropdown-icon">Click me</div>
+              <div class="dropdown-menu">
+                <div class="dropdown-item profile">Profile</div>
+                <div class="dropdown-item logout">Logout</div>
+              </div>
+            </div>
           </div>
         </nav>
         <div class="num">
@@ -304,5 +311,27 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
 
     <script src="dashboard.js"></script>
+    <script>
+      function toggleDropdown() {
+        const dropdown = document.getElementById("userDropdown");
+        dropdown.style.display =
+          dropdown.style.display === "block" ? "none" : "block";
+      }
+
+      function logout() {
+        alert("Logging out...");
+        // window.location.href = "/logout"; // Uncomment for redirect
+      }
+
+      // Optional: close dropdown when clicking outside
+      window.addEventListener("click", function (e) {
+        const dropdown = document.getElementById("userDropdown");
+        const logoRight = document.querySelector(".logo-right");
+
+        if (!logoRight.contains(e.target)) {
+          dropdown.style.display = "none";
+        }
+      });
+    </script>
   </body>
 </html>
