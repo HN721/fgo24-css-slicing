@@ -332,7 +332,9 @@
   height: 15px;
 }
 
-
+.burger{
+  display: none;
+}
 .box>p:nth-child(2){
   font-size: 18px;
   font-weight: 700;
@@ -778,5 +780,29 @@ footer{
     
   font-size: 14px;
   font-weight: 500;
+}
+.burger {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.burger > button {
+  display: none; 
+  margin-top: 10px;
+}
+
+.burger:hover > button {
+  display: block;
+  position: relative;
+  width: 100%;
+  top: 52px;
+}
+
+.burger svg {
+  cursor: pointer; 
+  fill: white; 
 }
 }
