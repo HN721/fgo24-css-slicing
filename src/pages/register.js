@@ -25,7 +25,7 @@ form.addEventListener("submit", (e) => {
   }).then((result) => {
     if (result.isConfirmed) {
       // form.reset();
-      window.location.href = "createPin.html";
+      window.location.href = "verify.html";
     }
   });
   form.reset();

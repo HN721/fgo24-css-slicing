@@ -34,7 +34,11 @@ submitBtn.addEventListener("click", (e) => {
   );
 
   if (!paymentMethodInput) {
-    alert("Silakan pilih metode pembayaran terlebih dahulu.");
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Silakan pilih metode pembayaran terlebih dahulu.",
+    });
     return;
   }
 
@@ -65,5 +69,11 @@ submitBtn.addEventListener("click", (e) => {
 
   localStorage.setItem("topupData", JSON.stringify(data));
 
-  alert("Data berhasil disimpan ke localStorage!");
+  Swal.fire({
+    position: "top-end",
+    icon: "success",
+    title: "Yeay! Sucess Top Up",
+    showConfirmButton: false,
+    timer: 1500,
+  });
 });
