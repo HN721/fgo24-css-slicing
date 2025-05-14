@@ -165,11 +165,13 @@
               <input type="number" id="pin-2" maxlength="1" required />
               <input type="number" id="pin-3" maxlength="1" required />
               <input type="number" id="pin-4" maxlength="1" required />
+              <input type="number" id="pin-5" maxlength="1" required />
+              <input type="number" id="pin-6" maxlength="1" required />
             </div>
             <button type="submit">Submit</button>
           </form>
           <div class="forgot-pin">
-            <p>Forgot Your Pin? <a href="Verify.html">Reset</a></p>
+            <p>Forgot Your Pin? <a href="forgot.html">Reset</a></p>
           </div>
         </div>
       </div>
@@ -199,7 +201,7 @@
 
           if (pin.length === 4) {
             savePinToLocalStorage(pin);
-            window.location.href = "../Dashboard/dashboard.html";
+            window.location.href = "login.html";
           } else {
             alert("Please enter a 4-digit PIN.");
           }
