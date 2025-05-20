@@ -41,3 +41,7 @@ expenseData.forEach((element) => {
   trans.append(img, trans1, p3);
   people.append(trans);
 });
+const nameElement = document.querySelector(".user-navbar > p:nth-child(2) ");
+const dataName = JSON.parse(localStorage.getItem("user-profile"));
+console.log(dataName);
+nameElement.textContent = dataName.name;
