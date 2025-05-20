@@ -77,3 +77,12 @@ submitBtn.addEventListener("click", (e) => {
     timer: 1500,
   });
 });
+const nameElement = document.querySelector(".logo-right > p");
+const nameElement2 = document.querySelector(".frame > p:nth-child(1)");
+const phoneElement = document.querySelector(".frame > p:nth-child(2)");
+
+const dataName = JSON.parse(localStorage.getItem("user-profile"));
+console.log(dataName);
+nameElement.textContent = dataName.name;
+nameElement2.textContent = dataName.name;
+phoneElement.textContent = dataName.phone;

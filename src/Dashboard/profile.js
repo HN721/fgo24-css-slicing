@@ -24,3 +24,7 @@ form.addEventListener("submit", (e) => {
     }
   });
 });
+const nameElement = document.querySelector(".logo-right > p");
+const dataName = JSON.parse(localStorage.getItem("user-profile"));
+console.log(dataName);
+nameElement.textContent = dataName.name;

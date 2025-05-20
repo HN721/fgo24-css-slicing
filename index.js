@@ -204,3 +204,7 @@ nextBtn.addEventListener("click", () => {
 searchInput.addEventListener("input", searchData);
 
 displayPeople(currentPage, filteredPeople);
+const nameElement = document.querySelector(".logo-right > p");
+const dataName = JSON.parse(localStorage.getItem("user-profile"));
+console.log(dataName);
+nameElement.textContent = dataName.name;
