@@ -30,6 +30,48 @@
       rel="stylesheet"
     />
   </head>
+  <style>
+    .stepper {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 10px;
+      font-family: sans-serif;
+      margin: 20px 0;
+    }
+
+    .step {
+      display: flex;
+      gap: 8px;
+    }
+
+    .circle {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background-color: #3f3f46;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+
+    .step.active .circle {
+      background-color: #2948ff;
+    }
+
+    .step.active p {
+      color: #2948ff;
+      font-weight: 500;
+    }
+
+    .line {
+      height: 1px;
+      width: 40px;
+      border-top: 2px dashed #ccc;
+    }
+  </style>
   <body>
     <div class="wrap">
       <div class="container">
@@ -110,18 +152,20 @@
               <img src="../img/pesawat-biru.png" alt="" srcset="" />
               <p>Transfer Money</p>
             </div>
-            <div class="find">
-              <div class="people-find">
-                <img src="../img/1.png" alt="" />
+            <div class="stepper">
+              <div class="step active">
+                <div class="circle">1</div>
                 <p>Find People</p>
               </div>
-              <div class="people-find">
-                <img src="../img/2.png" alt="" />
-                <a href="Detail.html">Set Nominal</a>
+              <div class="line"></div>
+              <div class="step">
+                <div class="circle">2</div>
+                <p>Set Nominal</p>
               </div>
-              <div class="people-find">
-                <img src="../img/3.png" alt="" />
-                <a>Finish</a>
+              <div class="line"></div>
+              <div class="step">
+                <div class="circle">3</div>
+                <p>Finish</p>
               </div>
             </div>
             <div class="table">
